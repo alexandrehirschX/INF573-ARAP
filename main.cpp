@@ -4,7 +4,11 @@
 #include <vector>
 #include <math.h>
 //#include "weights.cpp"
-
+#include <iostream>
+#include<Eigen/Dense>
+#include<fstream>
+// #include<Eigen/SparseCholesky>
+// typedef Eigen::SparseMatrix<double> SpMat;
 using namespace Eigen;
 
 
@@ -59,40 +63,46 @@ void get_rotations(MatrixXd &V1, MatrixXd &V2,std::vector<std::vector<int>> &N, 
     S = Matrix3d::Zero();
     for(int n = 0; n < N[i].size(); n++){
       j = N[i][n];
-      S += (V1.row(i) - V1.row(j)).transpose() * (V2.row(i) - V2.row(j));
+      S += W(i,j) * (V1.row(i) - V1.row(j)).transpose() * (V2.row(i) - V2.row(j));
     }
+    //S.transposeInPlace();
     JacobiSVD<MatrixXd> svd(S, ComputeThinU | ComputeThinV);
     V = svd.matrixV().transpose();
     U = svd.matrixU();
-    R[i] = V * U.transpose();
+    R[i] = V*U.transpose();
     if(R[i].determinant() <= 0){
       svd.singularValues().minCoeff(&in);
       U.col(in) *= -1;
-      R[i] = V * U.transpose();
+      R[i] = V*U.transpose();
       //std::cout << R[i].determinant() << std::endl;
     }
+    //R[i].transposeInPlace();
   }
 }
 
 
 void get_p(MatrixXd &V1, std::vector<Matrix3d> &R, std::vector<std::vector<int>> &N, MatrixXd &W, MatrixXd &L, MatrixXd &V2){
-  MatrixXd Right = MatrixXd::Zero(V1.rows() + 98, V1.cols());
+  
+  Eigen::SparseMatrix<double> lb_operator_;
+  Eigen::SparseLU<Eigen::SparseMatrix<double>> solver_;
+  
+  MatrixXd b = MatrixXd::Zero(V1.rows() + 98, V1.cols());
   int n = V1.rows();
   int j;
   for(int i = 0; i < V1.rows(); i++){
     for(int n = 0; n < N[i].size(); n++){
       j = N[i][n];
-      Right.row(i) += W(i,j) * (R[i] + R[j]) * (V1.row(i) - V1.row(j)).transpose() / 2;
+      b.row(i) += W(i,j) * (R[i] + R[j]) *(V1.row(i) - V1.row(j)).transpose() / 2;
     }
   }
   for(int i = 0; i < 98; i++){
-    Right.row(n+i) = V1.row(i);
+    b.row(n+i) = V1.row(i);
   }
+  //b = L.colPivHouseholderQr().solve(b);
+  b = L.inverse() * b;
 
-  Right = L.inverse() * Right;
-  V2 = Right.block(0,0,V1.rows(), 3);
-
-  V2.block(0,0, 98,3) = Right.block(V1.rows(),0,98,3);
+  V2 = b.block(0,0, V1.rows(), 3);
+  //V2.block(0,0,98,3) = Right.block(V1.rows(),0,98,3);
 };
 
 
@@ -100,19 +110,26 @@ void get_p(MatrixXd &V1, std::vector<Matrix3d> &R, std::vector<std::vector<int>>
 
 void ARAP(MatrixXd &V1, MatrixXd &V2, std::vector<std::vector<int>> &N, MatrixXd &W){
 
-    std::vector<Matrix3d> R(V1.rows());
-    get_rotations(V1, V2, N, W, R);
-    int n = W.rows();
-    MatrixXd L = MatrixXd::Zero(n + 98, n + 98);
-    L.block(0,0,n,n) = W;
-    for(int i = 0; i < W.rows(); i++){
-      L(i,i) = - W.row(i).sum();
+    for(int iter = 0; iter < 1; iter++){
+      std::vector<Matrix3d> R(V1.rows());
+      get_rotations(V1, V2, N, W, R);
+      int n = W.rows();
+      MatrixXd L = MatrixXd::Zero(n+98, n+98);
+      L.block(0,0,n,n) = -W;
+      //L = W;
+      for(int i = 0; i < W.rows(); i++){
+        L(i,i) = W.row(i).sum();
+      }
+      //L *= -1; 
+      for(int i = 0; i < 98; i++){
+        //L.row(i).setZero(); L.col(i).setZero();
+        L(i, n+i) = 1;
+        L(n+i, i) = 1;
+      }
+      get_p(V1, R, N, W, L, V2);
+
     }
-    for(int i = 0; i < 98; i++){
-      L(i, n+i) = 1;
-      L(n+i, i) = 1;
-    }
-    get_p(V1, R, N, W, L, V2);
+
 }
 
 
@@ -148,6 +165,13 @@ int main(int argc, char *argv[])
     MatrixXd W(n,n);
     get_weights(Vo, Fo, N, W);
 
+    // const static IOFormat CSVFormat(FullPrecision, DontAlignCols, ", ", "\n");
+    // std::ofstream file("test.csv");
+    // if (file.is_open())
+    // {
+    //     file << W.format(CSVFormat);
+    //     file.close();
+    // }
     ARAP(Vo, Vd, N, W);
 
     igl::opengl::glfw::Viewer viewer;
