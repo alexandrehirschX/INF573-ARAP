@@ -3,7 +3,6 @@
 #include <igl/unproject.h>
 #include <vector>
 #include <math.h>
-//#include "weights.cpp"
 #include <iostream>
 #include<Eigen/Dense>
 #include<fstream>
@@ -14,123 +13,13 @@ using namespace Eigen;
 
 
 MatrixXd Vo;
-MatrixXd Vd;
+MatrixXd Vd, Vd2;
 
 MatrixXi Fo;
 
 
-
-void get_neighbors(MatrixXi &F, std::vector<std::vector<int>> &N){
-  std::vector<int> tmp;
-  for(int i = 0; i < F.rows(); i++){
-    for(int j = 0; j < F.cols(); j++){
-      tmp = N[F(i,j)];
-      for(int k = 0; k < F.cols(); k++){
-        if(k != j){
-          if(std::find(tmp.begin(), tmp.end(), F(i,k)) == tmp.end()){
-            N[F(i,j)].push_back(F(i,k));
-          }
-        }
-      }
-    }
-  }
-}
-
 float calc_cotangent(Vector3d v1, Vector3d v2){
     return 1/tan(acos(v1.normalized().dot(v2.normalized())));
-}
-
-void get_weights(MatrixXd &V, MatrixXi &F, std::vector<std::vector<int>> &N, MatrixXd &W){
-  W = MatrixXd::Zero(V.rows(), V.rows());
-  int j;
-  for(int i = 0; i < V.rows(); i++){
-    for(int n = 0; n < N[i].size(); n++){
-      j = N[i][n];
-      for(int k = 0; k < N[i].size(); k++){
-        for(int l = 0; l < N[j].size(); l++){
-          if (N[i][k] == N[j][l]){
-            W(i,j) += calc_cotangent(V.row(i)-V.row(N[i][k]), V.row(j)-V.row(N[i][k])) / 2;
-          }
-        }
-      }
-    }
-  }
-}
-
-void get_rotations(MatrixXd &V1, MatrixXd &V2,std::vector<std::vector<int>> &N, MatrixXd &W, std::vector<Matrix3d> &R){
-  Matrix3d S, U, V;
-  int in, j;
-  for(int i = 0; i < R.size(); i++){
-    S = Matrix3d::Zero();
-    for(int n = 0; n < N[i].size(); n++){
-      j = N[i][n];
-      S += W(i,j) * (V1.row(i) - V1.row(j)).transpose() * (V2.row(i) - V2.row(j));
-    }
-    //S.transposeInPlace();
-    JacobiSVD<MatrixXd> svd(S, ComputeThinU | ComputeThinV);
-    V = svd.matrixV(); //.transpose();
-    U = svd.matrixU();
-    R[i] = V*U.transpose();
-    if(R[i].determinant() <= 0){
-      svd.singularValues().minCoeff(&in);
-      U.col(in) *= -1;
-      R[i] = V*U.transpose();
-      //std::cout << R[i].determinant() << std::endl;
-    }
-    //R[i].transposeInPlace();
-  }
-}
-
-
-void get_p(MatrixXd &V1, std::vector<Matrix3d> &R, std::vector<std::vector<int>> &N, MatrixXd &W, MatrixXd &L, MatrixXd &V2){
-
-  MatrixXd b = MatrixXd::Zero(V1.rows() + 98, V1.cols());
-  int n = V1.rows();
-  int j;
-  for(int i = 0; i < V1.rows(); i++){
-    for(int n = 0; n < N[i].size(); n++){
-      j = N[i][n];
-      b.row(i) += W(i,j) * (R[i] + R[j]) *(V1.row(i) - V1.row(j)).transpose() / 2;
-    }
-  }
-  for(int i = 0; i < 98; i++){
-    b.row(n+i) = V1.row(i);
-  }
-
-  // SimplicialCholesky<SpMat> chol(L);
-  // b = chol.solve(b); 
-  // //b = L.colPivHouseholderQr().solve(b);
-  b = L.inverse() * b;
-
-  V2 = b.block(0,0, V1.rows(), 3);
-  //V2.block(0,0,98,3) = Right.block(V1.rows(),0,98,3);
-};
-
-
-
-
-void ARAP(MatrixXd &V1, MatrixXd &V2, std::vector<std::vector<int>> &N, MatrixXd &W){
-
-    for(int iter = 0; iter < 5; iter++){
-      std::vector<Matrix3d> R(V1.rows());
-      get_rotations(V1, V2, N, W, R);
-      int n = W.rows();
-      MatrixXd L = MatrixXd::Zero(n + 98, n + 98);
-      L.block(0,0,n,n) = -W;
-      //L = W;
-      for(int i = 0; i < W.rows(); i++){
-        L(i,i) = W.row(i).sum();
-      }
-      //L *= -1; 
-      for(int i = 0; i < 98; i++){
-        //L.row(i).setZero(); L.col(i).setZero();
-        L(i, n+i) = 1;
-        L(n+i, i) = 1;
-      }
-      get_p(V1, R, N, W, L, V2);
-
-    }
-
 }
 
 
@@ -145,40 +34,157 @@ bool key_down(igl::opengl::glfw::Viewer& viewer, unsigned char key, int modifier
   return false;
 }
 
+class Shape {
+  public:
+    MatrixXd V1, V2, W, L;
+    MatrixXi F;
+    std::vector<std::vector<int>> N;
+    std::vector<Matrix3d> R;
+    std::vector<int> Fixed;
+    int n_vertices, n_fixed, n_faces;
+
+    Shape(MatrixXd Vo, MatrixXi Fo){
+      V1 = Vo;
+      F = Fo;
+      n_vertices = V1.rows();
+      n_faces = F.rows();
+      get_neighbors();
+      get_weights();
+      R.resize(n_vertices);
+    }
+
+    void deform(MatrixXd Vd, std::vector<int> Fi){
+      V2 = Vd;
+      n_fixed = Fi.size();
+      Fixed.resize(n_fixed);
+      Fixed = Fi;
+    }
+
+    void get_neighbors(){
+      N.resize(n_vertices);
+      std::vector<int> tmp;
+      for(int i = 0; i < n_faces; i++){
+        for(int j = 0; j < 3; j++){
+          tmp = N[F(i,j)];
+          for(int k = 0; k < 3; k++){
+            if(k != j){
+              if(std::find(tmp.begin(), tmp.end(), F(i,k)) == tmp.end()){
+                N[F(i,j)].push_back(F(i,k));
+              }
+            }
+          }
+        }
+      }
+    }
+
+    void get_weights(){
+      W = MatrixXd::Zero(n_vertices, n_vertices);
+      int j;
+      float w;
+      for(int i = 0; i < n_faces; i++){
+        for(int n = 0; n < N[i].size(); n++){
+          j = N[i][n];
+          for(int k = 0; k < N[i].size(); k++){
+            for(int l = 0; l < N[j].size(); l++){
+              if (N[i][k] == N[j][l] && i < j){
+                w = 0.5 * calc_cotangent(V1.row(i)-V1.row(N[i][k]), V1.row(j)-V1.row(N[i][k]));
+                W(i,j) += w;
+                W(j,i) += w;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    void get_rotations(){
+      Matrix3d S, U, V;
+      int in, j;
+      for(int i = 0; i < n_vertices; i++){
+        S.setZero();
+        for(int n = 0; n < N[i].size(); n++){
+          j = N[i][n];
+          S += W(i,j) * (V1.row(i) - V1.row(j)).transpose() * (V2.row(i) - V2.row(j));
+        }
+        JacobiSVD<MatrixXd> svd(S, ComputeThinU | ComputeThinV);
+        V = svd.matrixV(); 
+        U = svd.matrixU();
+        R[i] = V*U.transpose();
+        if(R[i].determinant() <= 0){
+          svd.singularValues().minCoeff(&in);
+          U.col(in) *= -1;
+          R[i] = V*U.transpose();
+        }
+      }
+    }
+
+    void get_p(){
+      MatrixXd b = MatrixXd::Zero(n_vertices + n_fixed, 3);
+      int j;
+      for(int i = 0; i < n_vertices; i++){
+        for(int n = 0; n < N[i].size(); n++){
+          j = N[i][n];
+          b.row(i) += W(i,j) * (R[i] + R[j]) *(V1.row(i) - V1.row(j)).transpose() * 0.5;
+        }
+      }
+      for(int i = 0; i < n_fixed; i++){
+        b.row(n_vertices + Fixed[i]) = V2.row(Fixed[i]);
+      }
+      b = L.inverse() * b;
+      V2 = b.block(0, 0, n_vertices, 3);
+    }
+
+    MatrixXd ARAP(int n_iter){
+      for(int iter = 0; iter < n_iter; iter++){
+        get_rotations();
+        L = MatrixXd::Zero(n_vertices + n_fixed, n_vertices + n_fixed);
+        L.block(0, 0, n_vertices, n_vertices) = -W;
+        L.block(0, 0, n_vertices, n_vertices).diagonal() = W.rowwise().sum();
+        int I;
+        for(int i = 0; i < n_fixed; i++){
+          I = Fixed[i];
+          L(I, n_vertices + I) = 1;
+          L(n_vertices + I, I) = 1;
+        }
+        get_p();
+      }
+      return V2;
+    }
+
+};
+
+
+
 int main(int argc, char *argv[])
 {
     // Load a mesh in OFF format
     igl::readOFF("../meshes/bar1.off", Vo, Fo);
-
+    std::cout << Fo.rows() << std::endl;
     // Plot the mesh
 
     Vd = Vo;
     for(int i = 49; i < 98; i++){
-      Vd(i,0) += 100;
+      Vd(i,0) += 50;
     }
-    
 
-    int n = Vo.rows(), m = Fo.rows();
-
-    std::vector<std::vector<int>> N(m);
-    get_neighbors(Fo, N);
-
-    MatrixXd W(n,n);
-    get_weights(Vo, Fo, N, W);
-
-    // const static IOFormat CSVFormat(FullPrecision, DontAlignCols, ", ", "\n");
-    // std::ofstream file("test.csv");
-    // if (file.is_open())
-    // {
-    //     file << W.format(CSVFormat);
-    //     file.close();
+    // Vd2 = Vo;
+    // for(int i = 49; i < 98; i++){
+    //   Vd2(i,0) -= 50;
     // }
-    
-    
-    //ARAP(Vo, Vd, N, W);
+
+    std::vector<int> Fixed(98);
+    for(int i = 0; i < 98; i++){
+      Fixed[i] = i;
+    }
+
+    Shape M(Vo, Fo);
+    M.deform(Vd, Fixed);
+    Vd = M.ARAP(5);
+
+    //M.deform(Vd2, Fixed);
+    //Vd = M.ARAP(5);
 
     igl::opengl::glfw::Viewer viewer;
-
     //viewer.callback_key_down = &key_down;
     viewer.data().set_mesh(Vd, Fo);
     viewer.launch();
