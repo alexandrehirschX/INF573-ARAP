@@ -7,8 +7,9 @@
 #include <iostream>
 #include<Eigen/Dense>
 #include<fstream>
-// #include<Eigen/SparseCholesky>
-// typedef Eigen::SparseMatrix<double> SpMat;
+#include<Eigen/SparseCholesky>
+
+
 using namespace Eigen;
 
 
@@ -67,7 +68,7 @@ void get_rotations(MatrixXd &V1, MatrixXd &V2,std::vector<std::vector<int>> &N, 
     }
     //S.transposeInPlace();
     JacobiSVD<MatrixXd> svd(S, ComputeThinU | ComputeThinV);
-    V = svd.matrixV().transpose();
+    V = svd.matrixV(); //.transpose();
     U = svd.matrixU();
     R[i] = V*U.transpose();
     if(R[i].determinant() <= 0){
@@ -82,10 +83,7 @@ void get_rotations(MatrixXd &V1, MatrixXd &V2,std::vector<std::vector<int>> &N, 
 
 
 void get_p(MatrixXd &V1, std::vector<Matrix3d> &R, std::vector<std::vector<int>> &N, MatrixXd &W, MatrixXd &L, MatrixXd &V2){
-  
-  Eigen::SparseMatrix<double> lb_operator_;
-  Eigen::SparseLU<Eigen::SparseMatrix<double>> solver_;
-  
+
   MatrixXd b = MatrixXd::Zero(V1.rows() + 98, V1.cols());
   int n = V1.rows();
   int j;
@@ -98,7 +96,10 @@ void get_p(MatrixXd &V1, std::vector<Matrix3d> &R, std::vector<std::vector<int>>
   for(int i = 0; i < 98; i++){
     b.row(n+i) = V1.row(i);
   }
-  //b = L.colPivHouseholderQr().solve(b);
+
+  // SimplicialCholesky<SpMat> chol(L);
+  // b = chol.solve(b); 
+  // //b = L.colPivHouseholderQr().solve(b);
   b = L.inverse() * b;
 
   V2 = b.block(0,0, V1.rows(), 3);
@@ -110,11 +111,11 @@ void get_p(MatrixXd &V1, std::vector<Matrix3d> &R, std::vector<std::vector<int>>
 
 void ARAP(MatrixXd &V1, MatrixXd &V2, std::vector<std::vector<int>> &N, MatrixXd &W){
 
-    for(int iter = 0; iter < 1; iter++){
+    for(int iter = 0; iter < 5; iter++){
       std::vector<Matrix3d> R(V1.rows());
       get_rotations(V1, V2, N, W, R);
       int n = W.rows();
-      MatrixXd L = MatrixXd::Zero(n+98, n+98);
+      MatrixXd L = MatrixXd::Zero(n + 98, n + 98);
       L.block(0,0,n,n) = -W;
       //L = W;
       for(int i = 0; i < W.rows(); i++){
@@ -153,7 +154,7 @@ int main(int argc, char *argv[])
 
     Vd = Vo;
     for(int i = 49; i < 98; i++){
-      Vd(i,0) += 10;
+      Vd(i,0) += 100;
     }
     
 
@@ -172,7 +173,9 @@ int main(int argc, char *argv[])
     //     file << W.format(CSVFormat);
     //     file.close();
     // }
-    ARAP(Vo, Vd, N, W);
+    
+    
+    //ARAP(Vo, Vd, N, W);
 
     igl::opengl::glfw::Viewer viewer;
 
