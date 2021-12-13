@@ -56,9 +56,11 @@ int main(int argc, char *argv[]){
   RowVector3f last_mouse;
 
   // Load input meshes
-  igl::read_triangle_mesh((argc>1?argv[1]:"../meshes/bar1.off"),V,F);
+  igl::read_triangle_mesh((argc>1?argv[1]:"../meshes/bar3.off"),V,F);
   U = V;
+  std::cout << "Loading Shape ... " << std::endl;
   Shape M(V,F);
+  std::cout << "Done" << std::endl;
   igl::opengl::glfw::Viewer viewer;
 
   std::cout << R"(

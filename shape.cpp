@@ -37,7 +37,7 @@ class Shape {
       n_vertices = V1.rows();
       n_faces = F.rows();
 
-
+      std::cout << "Step 1: Calculating vertex differentials" << std::endl;
       V1_diff.resize(n_vertices);
       for(int i = 0; i < n_vertices; i++){
         V1_diff[i] = MatrixXd::Zero(3, n_vertices);
@@ -45,11 +45,13 @@ class Shape {
           V1_diff[i].col(j) = (V1.row(i) - V1.row(j)).transpose();;
         }
       }
-
+      std::cout << "Step 2: Gathering neighbours" << std::endl;
       get_neighbors();
+
+      std::cout << "Step 3: Calculating weights" << std::endl;
       get_weights();
 
-
+      std::cout << "Step 4: Calculating weighted vertex differentials" << std::endl;
       w_V1_diff.resize(n_vertices);
       for(int i = 0; i < n_vertices; i++){
         w_V1_diff[i] = MatrixXd::Zero(3, n_vertices);
@@ -59,6 +61,7 @@ class Shape {
       }
 
       //Initializing rotations
+      std::cout << "Step 5: Calculating initial rotation matrices" << std::endl;
       R.resize(n_vertices);
       Matrix3d S, U, V;
       int in,j;
