@@ -1,7 +1,5 @@
 #include <igl/readOFF.h>
 #include <igl/opengl/glfw/Viewer.h>
-#include <igl/unproject.h>
-#include <igl/unproject_onto_mesh.h>
 #include <vector>
 #include <math.h>
 #include <iostream>
@@ -10,42 +8,43 @@
 #include<Eigen/SparseCholesky>
 
 
+#include <igl/min_quad_with_fixed.h>
+#include <igl/read_triangle_mesh.h>
+#include <igl/opengl/glfw/Viewer.h>
+#include <igl/project.h>
+#include <igl/unproject.h>
+#include <igl/snap_points.h>
+#include <igl/unproject_onto_mesh.h>
+#include <Eigen/Core>
+#include <stack>
+#include <unistd.h>
+
 using namespace Eigen;
 
 typedef Triplet<double> T;
-typedef SimplicialCholesky<SparseMatrix<double>> SC;
 
 MatrixXd Vo;
 MatrixXd Vd, Vd2;
 
 MatrixXi Fo;
 
-
-struct State
-{
-  // Rest and transformed control points
-  Eigen::MatrixXd CV, CU;
-  bool placing_handles = true;
-} s;
-
 float calc_cotangent(Vector3d v1, Vector3d v2){
     return 1/tan(acos(v1.normalized().dot(v2.normalized())));
 }
 
-
-
-
 class Shape {
   public:
-    MatrixXd V1, V2, W, L, b;
+    MatrixXd V1, V2, W, b;
     MatrixXi F;
-    SparseMatrix<double> Z;
     std::vector<std::vector<int>> N;
     std::vector<Matrix3d> R;
     std::vector<int> Fixed;
     std::vector<MatrixXd> V1_diff, w_V1_diff, V2_diff;
     int n_vertices, n_fixed, n_faces;
     float current_energy;
+    SparseMatrix<double> L;
+    std::vector<T> GlobaltripletList;
+    SimplicialCholesky<SparseMatrix<double>> chol;
 
     Shape(MatrixXd Vo, MatrixXi Fo){
       V1 = Vo;
@@ -58,6 +57,15 @@ class Shape {
       
       get_neighbors();
       get_weights();
+
+      int j;
+      for(int i = 0; i < n_vertices; i++){
+        for(int n = 0; n < N[i].size(); n++){
+          j = N[i][n];
+          GlobaltripletList.push_back(T(i,j, -W(i,j)));
+        }
+        GlobaltripletList.push_back(T(i,i, W.row(i).sum()));
+      }
 
       w_V1_diff.resize(n_vertices);
       for(int i = 0; i < n_vertices; i++){
@@ -128,28 +136,18 @@ class Shape {
     }
 
     void get_laplacian_and_b(){
-        L = MatrixXd::Zero(n_vertices + n_fixed, n_vertices + n_fixed);
-        L.block(0, 0, n_vertices, n_vertices) = -W;
-        L.block(0, 0, n_vertices, n_vertices).diagonal() = W.rowwise().sum();
-        int I;
+        
+        std::vector<T> tripletList = GlobaltripletList;
+        int I, J;
         for(int i = 0; i < n_fixed; i++){
-          I = Fixed[i];
-          L(I, n_vertices + I) = 1;
-          L(n_vertices + I, I) = 1;
+          I = Fixed[i]; J = n_vertices + I;
+          tripletList.push_back(T(I, J, 1));
+          tripletList.push_back(T(J, I, 1));
         }
 
-        std::vector<T> tripletList;
-        //tripletList.reserve((L > 0).count());
-        for(int i = 0; i < n_vertices + n_fixed; i++){
-          for(int j = 0; j < n_vertices + n_fixed; j++){
-            if (L(i,j) != 0){
-              tripletList.push_back(T(i,j,L(i,j)));
-            }
-          }
-        }
-
-        Z.resize(n_vertices + n_fixed, n_vertices + n_fixed);
-        Z.setFromTriplets(tripletList.begin(), tripletList.end());
+        L.resize(n_vertices + n_fixed, n_vertices + n_fixed);
+        L.setFromTriplets(tripletList.begin(), tripletList.end());
+        chol.compute(L);
       
 
         b = MatrixXd::Zero(n_vertices + n_fixed, 3);
@@ -198,9 +196,6 @@ class Shape {
           b.row(i) += 0.5 * (R[i] + R[j]) * w_V1_diff[i].col(j);
         }
       }
-
-      SC chol(Z);
-      //V2 = (L.inverse()*b).block(0, 0, n_vertices, 3);
       V2 = (chol.solve(b)).block(0, 0, n_vertices, 3);
     }
 
@@ -225,28 +220,6 @@ class Shape {
 };
 
 
-// bool key_down(igl::opengl::glfw::Viewer& viewer, unsigned char key, int modifier)
-// {
-//   switch(key){
-//     case '1':
-//     {
-
-//     }
-//     case '2':
-//     {
-
-      
-//     }
-
-//     default:
-//       return false;
-
-//   }
-//   viewer.data().clear();
-//   viewer.data().set_mesh(Vo, Fo);
-//   viewer.core().align_camera_center(Vo,Fo);
-//   return true;
-// }
 
 
 int main(int argc, char *argv[])
@@ -267,49 +240,263 @@ int main(int argc, char *argv[])
     //   Vd2(i,0) -= 50;
     // }
 
-    // std::vector<int> Fixed(98);
-    // for(int i = 0; i < 98; i++){
-    //   Fixed[i] = i;
-    // }
+    std::vector<int> Fixed(98);
+    for(int i = 0; i < 98; i++){
+      Fixed[i] = i;
+    }
 
-    // Shape M(Vo, Fo);
-    // M.deform(Vd, Fixed);
-    // Vd = M.ARAP(400);
-    
-    
-    igl::opengl::glfw::Viewer viewer;
+    Shape M(Vo,Fo);
+    M.deform(Vd, Fixed);
+    Vd = M.ARAP(5);
 
-    viewer.callback_mouse_down = 
-    [&](igl::opengl::glfw::Viewer&, int, int)->bool
-  {
-    RowVector3f last_mouse = Eigen::RowVector3f(
-      viewer.current_mouse_x,viewer.core().viewport(3)-viewer.current_mouse_y,0);
-
-      // Find closest point on mesh to mouse position
-      int fid;
-      Eigen::Vector3f bary;
-      if(igl::unproject_onto_mesh(
-        last_mouse.head(2),
-        viewer.core().view,
-        viewer.core().proj, 
-        viewer.core().viewport, 
-        Vo, Fo, 
-        fid, bary))
-      {
-        long c;
-        bary.maxCoeff(&c);
-        Eigen::RowVector3d new_c = Vo.row(Fo(fid,c));
-        std::cout << Fo(fid,c) << std::endl;
-      }
-
-    return false;
-  };
 
     //M.deform(Vd2, Fixed);
     //Vd = M.ARAP(10);
 
-    
+    igl::opengl::glfw::Viewer viewer;
     //viewer.callback_key_down = &key_down;
-    viewer.data().set_mesh(Vo, Fo);
+    viewer.data().set_mesh(Vd, Fo);
     viewer.launch();
 }
+
+
+// // Undoable
+// struct State
+// {
+//   // Rest and transformed control points
+//   Eigen::MatrixXd CV, CU;
+//   bool placing_handles = true;
+// } s;
+
+// int main(int argc, char *argv[])
+// {
+//   // Undo Management
+//   std::stack<State> undo_stack,redo_stack;
+//   const auto push_undo = [&](State & _s=s)
+//   {
+//     undo_stack.push(_s);
+//     // clear
+//     redo_stack = std::stack<State>();
+//   };
+//   const auto undo = [&]()
+//   {
+//     if(!undo_stack.empty())
+//     {
+//       redo_stack.push(s);
+//       s = undo_stack.top();
+//       undo_stack.pop();
+//     }
+//   };
+//   const auto redo = [&]()
+//   {
+//     if(!redo_stack.empty())
+//     {
+//       undo_stack.push(s);
+//       s = redo_stack.top();
+//       redo_stack.pop();
+//     }
+//   };
+
+//   Eigen::MatrixXd V,U;
+//   Eigen::MatrixXi F;
+//   long sel = -1;
+//   Eigen::RowVector3f last_mouse;
+//   igl::min_quad_with_fixed_data<double> biharmonic_data, arap_data;
+//   Eigen::SparseMatrix<double> arap_K;
+
+//   // Load input meshes
+//   igl::read_triangle_mesh(
+//     (argc>1?argv[1]:"../meshes/bar1.off"),V,F);
+//   U = V;
+//   Shape M(V,F);
+//   igl::opengl::glfw::Viewer viewer;
+
+//   std::cout<<R"(
+// [click]  To place new control point
+// [drag]   To move control point
+// [space]  Toggle whether placing control points or deforming
+// U,u      Update deformation (i.e., run another iteration of solver)
+// R,r      Reset control points 
+// ⌘ Z      Undo
+// ⌘ ⇧ Z    Redo
+// )";
+
+
+//   const auto & update = [&]()
+//   {
+//     // predefined colors
+//     const Eigen::RowVector3d orange(1.0,0.7,0.2);
+//     const Eigen::RowVector3d yellow(1.0,0.9,0.2);
+//     const Eigen::RowVector3d blue(0.2,0.3,0.8);
+//     const Eigen::RowVector3d green(0.2,0.6,0.3);
+//     if(s.placing_handles)
+//     {
+//       viewer.data().set_vertices(V);
+//       viewer.data().set_colors(blue);
+//       viewer.data().set_points(s.CV,orange);
+//     }else
+//     {
+//       // SOLVE FOR DEFORMATION
+//       //arap_single_iteration(arap_data,arap_K,s.CU,U);
+//       viewer.data().set_vertices(U);
+//       viewer.data().set_colors(orange);
+//       viewer.data().set_points(s.CU,blue);
+//     }
+//     viewer.data().compute_normals();
+//   };
+
+//   viewer.callback_mouse_down = 
+//     [&](igl::opengl::glfw::Viewer&, int, int)->bool
+//   {
+//     last_mouse = Eigen::RowVector3f(
+//       viewer.current_mouse_x,viewer.core().viewport(3)-viewer.current_mouse_y,0);
+//     if(s.placing_handles)
+//     {
+//       // Find closest point on mesh to mouse position
+//       int fid;
+//       Eigen::Vector3f bary;
+//       if(igl::unproject_onto_mesh(
+//         last_mouse.head(2),
+//         viewer.core().view,
+//         viewer.core().proj, 
+//         viewer.core().viewport, 
+//         V, F, 
+//         fid, bary))
+//       {
+//         long c;
+//         bary.maxCoeff(&c);
+//         Eigen::RowVector3d new_c = V.row(F(fid,c));
+//         if(s.CV.size()==0 || (s.CV.rowwise()-new_c).rowwise().norm().minCoeff() > 0)
+//         {
+//           push_undo();
+//           s.CV.conservativeResize(s.CV.rows()+1,3);
+//           // Snap to closest vertex on hit face
+//           s.CV.row(s.CV.rows()-1) = new_c;
+//           update();
+//           return true;
+//         }
+//       }
+//     }else
+//     {
+//       // Move closest control point
+//       Eigen::MatrixXf CP;
+//       igl::project(
+//         Eigen::MatrixXf(s.CU.cast<float>()),
+//         viewer.core().view,
+//         viewer.core().proj, viewer.core().viewport, CP);
+//       Eigen::VectorXf D = (CP.rowwise()-last_mouse).rowwise().norm();
+//       sel = (D.minCoeff(&sel) < 30)?sel:-1;
+//       if(sel != -1)
+//       {
+//         last_mouse(2) = CP(sel,2);
+//         push_undo();
+//         update();
+//         return true;
+//       }
+//     }
+//     return false;
+//   };
+
+//   viewer.callback_mouse_move = [&](igl::opengl::glfw::Viewer &, int,int)->bool
+//   {
+//     if(sel!=-1)
+//     {
+//       Eigen::RowVector3f drag_mouse(
+//         viewer.current_mouse_x,
+//         viewer.core().viewport(3) - viewer.current_mouse_y,
+//         last_mouse(2));
+//       Eigen::RowVector3f drag_scene,last_scene;
+//       igl::unproject(
+//         drag_mouse,
+//         viewer.core().view,
+//         viewer.core().proj,
+//         viewer.core().viewport,
+//         drag_scene);
+//       igl::unproject(
+//         last_mouse,
+//         viewer.core().view,
+//         viewer.core().proj,
+//         viewer.core().viewport,
+//         last_scene);
+//       s.CU.row(sel) += (drag_scene-last_scene).cast<double>();
+//       last_mouse = drag_mouse;
+//       update();
+//       return true;
+//     }
+//     return false;
+//   };
+//   viewer.callback_mouse_up = [&](igl::opengl::glfw::Viewer&, int, int)->bool
+//   {
+//     sel = -1;
+//     return false;
+//   };
+//   viewer.callback_key_pressed = 
+//     [&](igl::opengl::glfw::Viewer &, unsigned int key, int mod)
+//   {
+//     switch(key)
+//     {
+//       case 'R':
+//       case 'r':
+//       {
+//         push_undo();
+//         s.CU = s.CV;
+//         break;
+//       }
+//       case 'U':
+//       case 'u':
+//       {
+//         // Just trigger an update
+//         break;
+//       }
+//       case ' ':
+//         push_undo();
+//         s.placing_handles ^= 1;
+//         if(!s.placing_handles && s.CV.rows()>0)
+//         {
+//           // Switching to deformation mode
+//           s.CU = s.CV;
+//           Eigen::VectorXi b;
+//           igl::snap_points(s.CV,V,b);
+//           //std::cout << b << std::endl;
+//           // PRECOMPUTATION FOR DEFORMATION
+//           M.deform();
+//           arap_precompute(V,F,b,arap_data,arap_K);
+//         }
+//         break;
+//       default:
+//         return false;
+//     }
+//     update();
+//     return true;
+//   };
+
+//   // Special callback for handling undo
+//   viewer.callback_key_down = 
+//     [&](igl::opengl::glfw::Viewer &, unsigned char key, int mod)->bool
+//   {
+//     if(key == 'Z' && (mod & GLFW_MOD_SUPER))
+//     {
+//       (mod & GLFW_MOD_SHIFT) ? redo() : undo();
+//       update();
+//       return true;
+//     }
+//     return false;
+//   };
+//   viewer.callback_pre_draw = 
+//     [&](igl::opengl::glfw::Viewer &)->bool
+//   {
+//     if(viewer.core().is_animating && !s.placing_handles)
+//     {
+//       //arap_single_iteration(arap_data,arap_K,s.CU,U);
+//       update();
+//     }
+//     return false;
+//   };
+//   viewer.data().set_mesh(V,F);
+//   viewer.data().show_lines = false;
+//   viewer.core().is_animating = true;
+//   viewer.data().face_based = true;
+//   update();
+//   viewer.launch();
+//   return EXIT_SUCCESS;
+// }
