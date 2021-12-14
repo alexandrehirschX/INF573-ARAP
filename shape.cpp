@@ -163,7 +163,6 @@ class Shape {
     void get_rotations(){
       Matrix3d S, U, V;
       int in, I, j;
-      //current_energy = 0;
       RowVector3d v;
       for(int i = 0; i < Fixed.size(); i++){
         S.setZero();
@@ -177,8 +176,36 @@ class Shape {
             }
           }
           S += w_V1_diff[I].col(j) * (V2.row(i) - v); // V2_diff[i].col(j).transpose();
+        }
+        JacobiSVD<MatrixXd> svd(S, ComputeThinU | ComputeThinV);
+        V = svd.matrixV(); U = svd.matrixU();
+        R[I] = V*U.transpose();
+        if(R[I].determinant() <= 0){
+          svd.singularValues().minCoeff(&in);
+          U.col(in) *= -1;
+          R[I] = V*U.transpose();
+        }
+      }
+    }
 
-          //current_energy += W(i,j) * pow(( (v2i-v2j).transpose() - (R[i] * V1_diff[i].col(j))).norm(),2);
+    void get_rotations_and_energy(){
+      Matrix3d S, U, V;
+      int in, I, j;
+      current_energy = 0;
+      RowVector3d v;
+      for(int i = 0; i < Fixed.size(); i++){
+        S.setZero();
+        I = Fixed[i];
+        for(int n = 0; n < N[I].size(); n++){
+          j = N[I][n];
+          v = V1.row(j);
+          for(int k = 0; k < Fixed.size(); k++){
+            if(j == Fixed[k]){
+              v = V2.row(k);
+            }
+          }
+          S += w_V1_diff[I].col(j) * (V2.row(i) - v); // V2_diff[i].col(j).transpose();
+          current_energy += W(i,j) * pow(( (V2.row(i)-v).transpose() - (R[i] * V1_diff[i].col(j))).norm(),2);
         }
         JacobiSVD<MatrixXd> svd(S, ComputeThinU | ComputeThinV);
         V = svd.matrixV(); U = svd.matrixU();
@@ -204,26 +231,29 @@ class Shape {
     }
 
 
-    MatrixXd ARAP(int n_iter, float crit){
+    bool ARAP(MatrixXd &U, int n_iter, float crit){
       float old_energy;
+      bool b = true;
       for(int iter = 0; iter < n_iter; iter++){
         old_energy = current_energy;
-        get_rotations();
+        get_rotations_and_energy();
         get_p();
+        std::cout << abs(old_energy - current_energy) << std::endl;
         if(abs(old_energy - current_energy) < crit){
-          std::cout << "Iterations required: " << iter << std::endl;
+          b = false;
           break;
         }
       }
-      return V1;
+      U = V1;
+      return b;
     }
 
-    MatrixXd ARAP(int n_iter){
+    void ARAP(MatrixXd &U, int n_iter){
       for(int iter = 0; iter < n_iter; iter++){
         get_rotations();
         get_p();
       }
-      return V1;
+      U = V1;
     }
 
 };

@@ -80,6 +80,7 @@ int main(int argc, char *argv[]){
 
   MatrixXd V,U;
   MatrixXi F;
+  
   long sel = -1;
   RowVector3f last_mouse;
 
@@ -131,8 +132,7 @@ int main(int argc, char *argv[]){
     else{
       // SOLVE FOR DEFORMATION
       M.deform(s.CU);
-      U = M.ARAP(1);
-      //arap_single_iteration(arap_data,arap_K,s.CU,U);
+      M.ARAP(U,1);
       viewer.data().set_vertices(U);
       viewer.data().set_colors(orange);
       viewer.data().set_points(s.CU, s.CC);
@@ -293,7 +293,7 @@ int main(int argc, char *argv[]){
       case 'C' :
       case 'c' :
       {
-        push_undo();
+        //push_undo();
         s.placing_cp ^=1;
         s.placing_handles ^= 1;
         break;
@@ -373,18 +373,16 @@ int main(int argc, char *argv[]){
   viewer.callback_pre_draw = 
     [&](igl::opengl::glfw::Viewer &)->bool
   {
-    if(viewer.core().is_animating && !s.placing_handles)
-    { 
+    if(viewer.core().is_animating && !s.placing_handles && !s.placing_cp)
+    {
       M.deform(s.CU);
-      U = M.ARAP(1);
-      //arap_single_iteration(arap_data,arap_K,s.CU,U);
-      update();
+      if(M.ARAP(U,1,1)) update();
     }
     return false;
   };
   viewer.data().set_mesh(V,F);
-  viewer.data().show_lines = false;
-  viewer.core().is_animating = false; //true;
+  viewer.data().show_lines = true;
+  viewer.core().is_animating = true; //false; //true;
   viewer.data().face_based = true;
   update();
   
