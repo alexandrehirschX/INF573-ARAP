@@ -1,0 +1,3552 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/INF573-ARAP/main.cpp
+igl/read_triangle_mesh.h
+-
+igl/opengl/glfw/Viewer.h
+-
+igl/project.h
+-
+igl/unproject.h
+-
+igl/unproject_onto_mesh.h
+-
+igl/snap_points.h
+-
+stack
+-
+shape.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/INF573-ARAP/shape.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/INF573-ARAP/shape.cpp
+vector
+-
+math.h
+-
+iostream
+-
+Eigen/Dense
+-
+Eigen/SparseCholesky
+-
+Eigen/Core
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Cholesky
+Core
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Core
+Jacobi
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Jacobi
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+src/Cholesky/LLT.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Cholesky/LLT.h
+src/Cholesky/LDLT.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Cholesky/LDLT.h
+mkl_lapacke.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/mkl_lapacke.h
+src/misc/lapacke.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/lapacke.h
+src/Cholesky/LLT_LAPACKE.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Cholesky/LLT_LAPACKE.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Core
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+cuda_runtime.h
+-
+new
+-
+src/Core/util/Macros.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/Macros.h
+complex
+-
+src/Core/util/MKL_support.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/MKL_support.h
+malloc.h
+-
+immintrin.h
+-
+mmintrin.h
+-
+emmintrin.h
+-
+xmmintrin.h
+-
+pmmintrin.h
+-
+tmmintrin.h
+-
+smmintrin.h
+-
+nmmintrin.h
+-
+immintrin.h
+-
+altivec.h
+-
+altivec.h
+-
+arm_neon.h
+-
+vecintrin.h
+-
+vector_types.h
+-
+host_defines.h
+-
+cuda_fp16.h
+-
+omp.h
+-
+cerrno
+-
+cstddef
+-
+cstdlib
+-
+cmath
+-
+cassert
+-
+functional
+-
+iosfwd
+-
+cstring
+-
+string
+-
+limits
+-
+climits
+-
+algorithm
+-
+type_traits
+-
+iostream
+-
+intrin.h
+-
+src/Core/util/Constants.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/Constants.h
+src/Core/util/Meta.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/Meta.h
+src/Core/util/ForwardDeclarations.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ForwardDeclarations.h
+src/Core/util/StaticAssert.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/StaticAssert.h
+src/Core/util/XprHelper.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/XprHelper.h
+src/Core/util/Memory.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/Memory.h
+src/Core/NumTraits.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/NumTraits.h
+src/Core/MathFunctions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/MathFunctions.h
+src/Core/GenericPacketMath.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/GenericPacketMath.h
+src/Core/MathFunctionsImpl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/MathFunctionsImpl.h
+src/Core/arch/Default/ConjHelper.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/Default/ConjHelper.h
+src/Core/arch/SSE/PacketMath.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/PacketMath.h
+src/Core/arch/AVX/PacketMath.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX/PacketMath.h
+src/Core/arch/AVX512/PacketMath.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX512/PacketMath.h
+src/Core/arch/AVX512/MathFunctions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX512/MathFunctions.h
+src/Core/arch/SSE/PacketMath.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/PacketMath.h
+src/Core/arch/SSE/Complex.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/Complex.h
+src/Core/arch/SSE/MathFunctions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/MathFunctions.h
+src/Core/arch/AVX/PacketMath.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX/PacketMath.h
+src/Core/arch/AVX/MathFunctions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX/MathFunctions.h
+src/Core/arch/AVX/Complex.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX/Complex.h
+src/Core/arch/AVX/TypeCasting.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX/TypeCasting.h
+src/Core/arch/SSE/TypeCasting.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/TypeCasting.h
+src/Core/arch/SSE/PacketMath.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/PacketMath.h
+src/Core/arch/SSE/MathFunctions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/MathFunctions.h
+src/Core/arch/SSE/Complex.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/Complex.h
+src/Core/arch/SSE/TypeCasting.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/TypeCasting.h
+src/Core/arch/AltiVec/PacketMath.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AltiVec/PacketMath.h
+src/Core/arch/AltiVec/MathFunctions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AltiVec/MathFunctions.h
+src/Core/arch/AltiVec/Complex.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AltiVec/Complex.h
+src/Core/arch/NEON/PacketMath.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/NEON/PacketMath.h
+src/Core/arch/NEON/MathFunctions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/NEON/MathFunctions.h
+src/Core/arch/NEON/Complex.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/NEON/Complex.h
+src/Core/arch/ZVector/PacketMath.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/ZVector/PacketMath.h
+src/Core/arch/ZVector/MathFunctions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/ZVector/MathFunctions.h
+src/Core/arch/ZVector/Complex.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/ZVector/Complex.h
+src/Core/arch/CUDA/Half.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/CUDA/Half.h
+src/Core/arch/CUDA/PacketMathHalf.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/CUDA/PacketMathHalf.h
+src/Core/arch/CUDA/TypeCasting.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/CUDA/TypeCasting.h
+src/Core/arch/CUDA/PacketMath.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/CUDA/PacketMath.h
+src/Core/arch/CUDA/MathFunctions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/CUDA/MathFunctions.h
+src/Core/arch/Default/Settings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/Default/Settings.h
+src/Core/functors/TernaryFunctors.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/functors/TernaryFunctors.h
+src/Core/functors/BinaryFunctors.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/functors/BinaryFunctors.h
+src/Core/functors/UnaryFunctors.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/functors/UnaryFunctors.h
+src/Core/functors/NullaryFunctors.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/functors/NullaryFunctors.h
+src/Core/functors/StlFunctors.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/functors/StlFunctors.h
+src/Core/functors/AssignmentFunctors.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/functors/AssignmentFunctors.h
+src/Core/arch/CUDA/Complex.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/CUDA/Complex.h
+src/Core/IO.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/IO.h
+src/Core/DenseCoeffsBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/DenseCoeffsBase.h
+src/Core/DenseBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/DenseBase.h
+src/Core/MatrixBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/MatrixBase.h
+src/Core/EigenBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/EigenBase.h
+src/Core/Product.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Product.h
+src/Core/CoreEvaluators.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CoreEvaluators.h
+src/Core/AssignEvaluator.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/AssignEvaluator.h
+src/Core/Assign.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Assign.h
+src/Core/ArrayBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/ArrayBase.h
+src/Core/util/BlasUtil.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/BlasUtil.h
+src/Core/DenseStorage.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/DenseStorage.h
+src/Core/NestByValue.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/NestByValue.h
+src/Core/ReturnByValue.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/ReturnByValue.h
+src/Core/NoAlias.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/NoAlias.h
+src/Core/PlainObjectBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/PlainObjectBase.h
+src/Core/Matrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Matrix.h
+src/Core/Array.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Array.h
+src/Core/CwiseTernaryOp.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CwiseTernaryOp.h
+src/Core/CwiseBinaryOp.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CwiseBinaryOp.h
+src/Core/CwiseUnaryOp.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CwiseUnaryOp.h
+src/Core/CwiseNullaryOp.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CwiseNullaryOp.h
+src/Core/CwiseUnaryView.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CwiseUnaryView.h
+src/Core/SelfCwiseBinaryOp.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/SelfCwiseBinaryOp.h
+src/Core/Dot.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Dot.h
+src/Core/StableNorm.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/StableNorm.h
+src/Core/Stride.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Stride.h
+src/Core/MapBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/MapBase.h
+src/Core/Map.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Map.h
+src/Core/Ref.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Ref.h
+src/Core/Block.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Block.h
+src/Core/VectorBlock.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/VectorBlock.h
+src/Core/Transpose.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Transpose.h
+src/Core/DiagonalMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/DiagonalMatrix.h
+src/Core/Diagonal.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Diagonal.h
+src/Core/DiagonalProduct.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/DiagonalProduct.h
+src/Core/Redux.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Redux.h
+src/Core/Visitor.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Visitor.h
+src/Core/Fuzzy.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Fuzzy.h
+src/Core/Swap.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Swap.h
+src/Core/CommaInitializer.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CommaInitializer.h
+src/Core/GeneralProduct.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/GeneralProduct.h
+src/Core/Solve.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Solve.h
+src/Core/Inverse.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Inverse.h
+src/Core/SolverBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/SolverBase.h
+src/Core/PermutationMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/PermutationMatrix.h
+src/Core/Transpositions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Transpositions.h
+src/Core/TriangularMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/TriangularMatrix.h
+src/Core/SelfAdjointView.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/SelfAdjointView.h
+src/Core/products/GeneralBlockPanelKernel.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralBlockPanelKernel.h
+src/Core/products/Parallelizer.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/Parallelizer.h
+src/Core/ProductEvaluators.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/ProductEvaluators.h
+src/Core/products/GeneralMatrixVector.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralMatrixVector.h
+src/Core/products/GeneralMatrixMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralMatrixMatrix.h
+src/Core/SolveTriangular.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/SolveTriangular.h
+src/Core/products/GeneralMatrixMatrixTriangular.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
+src/Core/products/SelfadjointMatrixVector.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/SelfadjointMatrixVector.h
+src/Core/products/SelfadjointMatrixMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/SelfadjointMatrixMatrix.h
+src/Core/products/SelfadjointProduct.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/SelfadjointProduct.h
+src/Core/products/SelfadjointRank2Update.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/SelfadjointRank2Update.h
+src/Core/products/TriangularMatrixVector.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularMatrixVector.h
+src/Core/products/TriangularMatrixMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularMatrixMatrix.h
+src/Core/products/TriangularSolverMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularSolverMatrix.h
+src/Core/products/TriangularSolverVector.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularSolverVector.h
+src/Core/BandMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/BandMatrix.h
+src/Core/CoreIterators.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CoreIterators.h
+src/Core/ConditionEstimator.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/ConditionEstimator.h
+src/Core/BooleanRedux.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/BooleanRedux.h
+src/Core/Select.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Select.h
+src/Core/VectorwiseOp.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/VectorwiseOp.h
+src/Core/Random.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Random.h
+src/Core/Replicate.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Replicate.h
+src/Core/Reverse.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Reverse.h
+src/Core/ArrayWrapper.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/ArrayWrapper.h
+src/Core/products/GeneralMatrixMatrix_BLAS.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralMatrixMatrix_BLAS.h
+src/Core/products/GeneralMatrixVector_BLAS.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralMatrixVector_BLAS.h
+src/Core/products/GeneralMatrixMatrixTriangular_BLAS.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralMatrixMatrixTriangular_BLAS.h
+src/Core/products/SelfadjointMatrixMatrix_BLAS.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/SelfadjointMatrixMatrix_BLAS.h
+src/Core/products/SelfadjointMatrixVector_BLAS.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/SelfadjointMatrixVector_BLAS.h
+src/Core/products/TriangularMatrixMatrix_BLAS.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularMatrixMatrix_BLAS.h
+src/Core/products/TriangularMatrixVector_BLAS.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularMatrixVector_BLAS.h
+src/Core/products/TriangularSolverMatrix_BLAS.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularSolverMatrix_BLAS.h
+src/Core/Assign_MKL.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Assign_MKL.h
+src/Core/GlobalFunctions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/GlobalFunctions.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Dense
+Core
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Core
+LU
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/LU
+Cholesky
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Cholesky
+QR
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/QR
+SVD
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SVD
+Geometry
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Geometry
+Eigenvalues
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Eigenvalues
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Eigenvalues
+Core
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Core
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+Cholesky
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Cholesky
+Jacobi
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Jacobi
+Householder
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Householder
+LU
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/LU
+Geometry
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Geometry
+src/misc/RealSvd2x2.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/RealSvd2x2.h
+src/Eigenvalues/Tridiagonalization.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/Tridiagonalization.h
+src/Eigenvalues/RealSchur.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/RealSchur.h
+src/Eigenvalues/EigenSolver.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/EigenSolver.h
+src/Eigenvalues/SelfAdjointEigenSolver.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h
+src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h
+src/Eigenvalues/HessenbergDecomposition.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/HessenbergDecomposition.h
+src/Eigenvalues/ComplexSchur.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/ComplexSchur.h
+src/Eigenvalues/ComplexEigenSolver.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/ComplexEigenSolver.h
+src/Eigenvalues/RealQZ.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/RealQZ.h
+src/Eigenvalues/GeneralizedEigenSolver.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h
+src/Eigenvalues/MatrixBaseEigenvalues.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
+mkl_lapacke.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/mkl_lapacke.h
+src/misc/lapacke.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/lapacke.h
+src/Eigenvalues/RealSchur_LAPACKE.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/RealSchur_LAPACKE.h
+src/Eigenvalues/ComplexSchur_LAPACKE.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/ComplexSchur_LAPACKE.h
+src/Eigenvalues/SelfAdjointEigenSolver_LAPACKE.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/SelfAdjointEigenSolver_LAPACKE.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Geometry
+Core
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Core
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+SVD
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SVD
+LU
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/LU
+limits
+-
+src/Geometry/OrthoMethods.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/OrthoMethods.h
+src/Geometry/EulerAngles.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/EulerAngles.h
+src/Geometry/Homogeneous.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Homogeneous.h
+src/Geometry/RotationBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/RotationBase.h
+src/Geometry/Rotation2D.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Rotation2D.h
+src/Geometry/Quaternion.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Quaternion.h
+src/Geometry/AngleAxis.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/AngleAxis.h
+src/Geometry/Transform.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Transform.h
+src/Geometry/Translation.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Translation.h
+src/Geometry/Scaling.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Scaling.h
+src/Geometry/Hyperplane.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Hyperplane.h
+src/Geometry/ParametrizedLine.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/ParametrizedLine.h
+src/Geometry/AlignedBox.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/AlignedBox.h
+src/Geometry/Umeyama.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Umeyama.h
+src/Geometry/arch/Geometry_SSE.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/arch/Geometry_SSE.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Householder
+Core
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Core
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+src/Householder/Householder.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Householder/Householder.h
+src/Householder/HouseholderSequence.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Householder/HouseholderSequence.h
+src/Householder/BlockHouseholder.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Householder/BlockHouseholder.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/IterativeLinearSolvers
+SparseCore
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseCore
+OrderingMethods
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/OrderingMethods
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+Eigen/IterativeLinearSolvers
+-
+src/IterativeLinearSolvers/SolveWithGuess.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h
+src/IterativeLinearSolvers/IterativeSolverBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h
+src/IterativeLinearSolvers/BasicPreconditioners.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h
+src/IterativeLinearSolvers/ConjugateGradient.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h
+src/IterativeLinearSolvers/LeastSquareConjugateGradient.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h
+src/IterativeLinearSolvers/BiCGSTAB.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h
+src/IterativeLinearSolvers/IncompleteLUT.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h
+src/IterativeLinearSolvers/IncompleteCholesky.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Jacobi
+Core
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Core
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+src/Jacobi/Jacobi.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Jacobi/Jacobi.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/LU
+Core
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Core
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+src/misc/Kernel.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/Kernel.h
+src/misc/Image.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/Image.h
+src/LU/FullPivLU.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/LU/FullPivLU.h
+src/LU/PartialPivLU.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/LU/PartialPivLU.h
+mkl_lapacke.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/mkl_lapacke.h
+src/misc/lapacke.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/lapacke.h
+src/LU/PartialPivLU_LAPACKE.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/LU/PartialPivLU_LAPACKE.h
+src/LU/Determinant.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/LU/Determinant.h
+src/LU/InverseImpl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/LU/InverseImpl.h
+src/LU/arch/Inverse_SSE.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/LU/arch/Inverse_SSE.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/OrderingMethods
+SparseCore
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseCore
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+src/OrderingMethods/Amd.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/OrderingMethods/Amd.h
+src/OrderingMethods/Ordering.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/OrderingMethods/Ordering.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/QR
+Core
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Core
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+Cholesky
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Cholesky
+Jacobi
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Jacobi
+Householder
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Householder
+src/QR/HouseholderQR.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/QR/HouseholderQR.h
+src/QR/FullPivHouseholderQR.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/QR/FullPivHouseholderQR.h
+src/QR/ColPivHouseholderQR.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/QR/ColPivHouseholderQR.h
+src/QR/CompleteOrthogonalDecomposition.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/QR/CompleteOrthogonalDecomposition.h
+mkl_lapacke.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/mkl_lapacke.h
+src/misc/lapacke.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/lapacke.h
+src/QR/HouseholderQR_LAPACKE.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/QR/HouseholderQR_LAPACKE.h
+src/QR/ColPivHouseholderQR_LAPACKE.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/QR/ColPivHouseholderQR_LAPACKE.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SVD
+QR
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/QR
+Householder
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Householder
+Jacobi
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Jacobi
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+src/misc/RealSvd2x2.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/RealSvd2x2.h
+src/SVD/UpperBidiagonalization.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SVD/UpperBidiagonalization.h
+src/SVD/SVDBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SVD/SVDBase.h
+src/SVD/JacobiSVD.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SVD/JacobiSVD.h
+src/SVD/BDCSVD.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SVD/BDCSVD.h
+mkl_lapacke.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/mkl_lapacke.h
+src/misc/lapacke.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/lapacke.h
+src/SVD/JacobiSVD_LAPACKE.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SVD/JacobiSVD_LAPACKE.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Sparse
+Eigen/Sparse
+-
+SparseCore
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseCore
+OrderingMethods
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/OrderingMethods
+SparseCholesky
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseCholesky
+SparseLU
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseLU
+SparseQR
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseQR
+IterativeLinearSolvers
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/IterativeLinearSolvers
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseCholesky
+SparseCore
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseCore
+OrderingMethods
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/OrderingMethods
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+src/SparseCholesky/SimplicialCholesky.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h
+src/SparseCholesky/SimplicialCholesky_impl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseCore
+Core
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Core
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+vector
+-
+map
+-
+cstdlib
+-
+cstring
+-
+algorithm
+-
+src/SparseCore/SparseUtil.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseUtil.h
+src/SparseCore/SparseMatrixBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseMatrixBase.h
+src/SparseCore/SparseAssign.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseAssign.h
+src/SparseCore/CompressedStorage.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/CompressedStorage.h
+src/SparseCore/AmbiVector.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/AmbiVector.h
+src/SparseCore/SparseCompressedBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseCompressedBase.h
+src/SparseCore/SparseMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseMatrix.h
+src/SparseCore/SparseMap.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseMap.h
+src/SparseCore/MappedSparseMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/MappedSparseMatrix.h
+src/SparseCore/SparseVector.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseVector.h
+src/SparseCore/SparseRef.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseRef.h
+src/SparseCore/SparseCwiseUnaryOp.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseCwiseUnaryOp.h
+src/SparseCore/SparseCwiseBinaryOp.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseCwiseBinaryOp.h
+src/SparseCore/SparseTranspose.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseTranspose.h
+src/SparseCore/SparseBlock.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseBlock.h
+src/SparseCore/SparseDot.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseDot.h
+src/SparseCore/SparseRedux.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseRedux.h
+src/SparseCore/SparseView.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseView.h
+src/SparseCore/SparseDiagonalProduct.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseDiagonalProduct.h
+src/SparseCore/ConservativeSparseSparseProduct.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h
+src/SparseCore/SparseSparseProductWithPruning.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseSparseProductWithPruning.h
+src/SparseCore/SparseProduct.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseProduct.h
+src/SparseCore/SparseDenseProduct.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseDenseProduct.h
+src/SparseCore/SparseSelfAdjointView.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseSelfAdjointView.h
+src/SparseCore/SparseTriangularView.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseTriangularView.h
+src/SparseCore/TriangularSolver.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/TriangularSolver.h
+src/SparseCore/SparsePermutation.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparsePermutation.h
+src/SparseCore/SparseFuzzy.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseFuzzy.h
+src/SparseCore/SparseSolverBase.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseSolverBase.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseLU
+SparseCore
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseCore
+OrderingMethods
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/OrderingMethods
+src/SparseLU/SparseLU_gemm_kernel.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_gemm_kernel.h
+src/SparseLU/SparseLU_Structs.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_Structs.h
+src/SparseLU/SparseLU_SupernodalMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h
+src/SparseLU/SparseLUImpl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLUImpl.h
+src/SparseCore/SparseColEtree.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseColEtree.h
+src/SparseLU/SparseLU_Memory.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_Memory.h
+src/SparseLU/SparseLU_heap_relax_snode.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h
+src/SparseLU/SparseLU_relax_snode.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_relax_snode.h
+src/SparseLU/SparseLU_pivotL.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_pivotL.h
+src/SparseLU/SparseLU_panel_dfs.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_panel_dfs.h
+src/SparseLU/SparseLU_kernel_bmod.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_kernel_bmod.h
+src/SparseLU/SparseLU_panel_bmod.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_panel_bmod.h
+src/SparseLU/SparseLU_column_dfs.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_column_dfs.h
+src/SparseLU/SparseLU_column_bmod.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_column_bmod.h
+src/SparseLU/SparseLU_copy_to_ucol.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h
+src/SparseLU/SparseLU_pruneL.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_pruneL.h
+src/SparseLU/SparseLU_Utils.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_Utils.h
+src/SparseLU/SparseLU.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseQR
+SparseCore
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/SparseCore
+OrderingMethods
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/OrderingMethods
+src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+OrderingMethods
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/OrderingMethods
+src/SparseCore/SparseColEtree.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseColEtree.h
+src/SparseQR/SparseQR.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseQR/SparseQR.h
+src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Cholesky/LDLT.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Cholesky/LLT.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Cholesky/LLT_LAPACKE.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Array.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/ArrayBase.h
+../plugins/CommonCwiseUnaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h
+../plugins/MatrixCwiseUnaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
+../plugins/ArrayCwiseUnaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/ArrayCwiseUnaryOps.h
+../plugins/CommonCwiseBinaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/CommonCwiseBinaryOps.h
+../plugins/MatrixCwiseBinaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
+../plugins/ArrayCwiseBinaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/ArrayCwiseBinaryOps.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/ArrayWrapper.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Assign.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/AssignEvaluator.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Assign_MKL.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/BandMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Block.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/BooleanRedux.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CommaInitializer.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/ConditionEstimator.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CoreEvaluators.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CoreIterators.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CwiseBinaryOp.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CwiseNullaryOp.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CwiseTernaryOp.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CwiseUnaryOp.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/CwiseUnaryView.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/DenseBase.h
+../plugins/BlockMethods.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/BlockMethods.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/DenseCoeffsBase.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/DenseStorage.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Diagonal.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/DiagonalMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/DiagonalProduct.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Dot.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/EigenBase.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Fuzzy.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/GeneralProduct.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/GenericPacketMath.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/GlobalFunctions.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/IO.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Inverse.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Map.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/MapBase.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/MathFunctions.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/MathFunctionsImpl.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Matrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/MatrixBase.h
+../plugins/CommonCwiseUnaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h
+../plugins/CommonCwiseBinaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/CommonCwiseBinaryOps.h
+../plugins/MatrixCwiseUnaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
+../plugins/MatrixCwiseBinaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/NestByValue.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/NoAlias.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/NumTraits.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/PermutationMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/PlainObjectBase.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Product.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/ProductEvaluators.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Random.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Redux.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Ref.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Replicate.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/ReturnByValue.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Reverse.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Select.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/SelfAdjointView.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/SelfCwiseBinaryOp.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Solve.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/SolveTriangular.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/SolverBase.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/StableNorm.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Stride.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Swap.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Transpose.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Transpositions.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/TriangularMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/VectorBlock.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/VectorwiseOp.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/Visitor.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX/Complex.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX/MathFunctions.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX/PacketMath.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX/TypeCasting.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX512/MathFunctions.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AVX512/PacketMath.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AltiVec/Complex.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AltiVec/MathFunctions.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/AltiVec/PacketMath.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/CUDA/Complex.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/CUDA/Half.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/CUDA/MathFunctions.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/CUDA/PacketMath.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/CUDA/PacketMathHalf.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/CUDA/TypeCasting.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/Default/ConjHelper.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/Default/Settings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/NEON/Complex.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/NEON/MathFunctions.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/NEON/PacketMath.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/Complex.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/MathFunctions.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/PacketMath.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/SSE/TypeCasting.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/ZVector/Complex.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/ZVector/MathFunctions.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/arch/ZVector/PacketMath.h
+stdint.h
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/functors/AssignmentFunctors.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/functors/BinaryFunctors.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/functors/NullaryFunctors.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/functors/StlFunctors.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/functors/TernaryFunctors.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/functors/UnaryFunctors.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralBlockPanelKernel.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralMatrixMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralMatrixMatrixTriangular_BLAS.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralMatrixMatrix_BLAS.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralMatrixVector.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/GeneralMatrixVector_BLAS.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/Parallelizer.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/SelfadjointMatrixMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/SelfadjointMatrixMatrix_BLAS.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/SelfadjointMatrixVector.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/SelfadjointMatrixVector_BLAS.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/SelfadjointProduct.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/SelfadjointRank2Update.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularMatrixMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularMatrixMatrix_BLAS.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularMatrixVector.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularMatrixVector_BLAS.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularSolverMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularSolverMatrix_BLAS.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/products/TriangularSolverVector.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/BlasUtil.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/Constants.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ForwardDeclarations.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/MKL_support.h
+mkl.h
+-
+../../misc/blas.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/blas.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/Macros.h
+cstdlib
+-
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/Memory.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/Meta.h
+cfloat
+-
+math_constants.h
+-
+cstdint
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/NonMPL2.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/StaticAssert.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/XprHelper.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/ComplexEigenSolver.h
+./ComplexSchur.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/ComplexSchur.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/ComplexSchur.h
+./HessenbergDecomposition.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/HessenbergDecomposition.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/ComplexSchur_LAPACKE.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/EigenSolver.h
+./RealSchur.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/RealSchur.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h
+./RealQZ.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/RealQZ.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h
+./Tridiagonalization.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/Tridiagonalization.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/HessenbergDecomposition.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/RealQZ.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/RealSchur.h
+./HessenbergDecomposition.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/HessenbergDecomposition.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/RealSchur_LAPACKE.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h
+./Tridiagonalization.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/Tridiagonalization.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/SelfAdjointEigenSolver_LAPACKE.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Eigenvalues/Tridiagonalization.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/AlignedBox.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/AngleAxis.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/EulerAngles.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Homogeneous.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Hyperplane.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/OrthoMethods.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/ParametrizedLine.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Quaternion.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Rotation2D.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/RotationBase.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Scaling.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Transform.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Translation.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/Umeyama.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Geometry/arch/Geometry_SSE.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Householder/BlockHouseholder.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Householder/Householder.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Householder/HouseholderSequence.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h
+vector
+-
+list
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Jacobi/Jacobi.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/LU/Determinant.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/LU/FullPivLU.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/LU/InverseImpl.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/LU/PartialPivLU.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/LU/PartialPivLU_LAPACKE.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/LU/arch/Inverse_SSE.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/OrderingMethods/Amd.h
+../Core/util/NonMPL2.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/NonMPL2.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/OrderingMethods/Eigen_Colamd.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/OrderingMethods/Ordering.h
+Eigen_Colamd.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/OrderingMethods/Eigen_Colamd.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/QR/ColPivHouseholderQR.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/QR/ColPivHouseholderQR_LAPACKE.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/QR/CompleteOrthogonalDecomposition.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/QR/FullPivHouseholderQR.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/QR/HouseholderQR.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/QR/HouseholderQR_LAPACKE.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SVD/BDCSVD.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SVD/JacobiSVD.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SVD/JacobiSVD_LAPACKE.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SVD/SVDBase.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SVD/UpperBidiagonalization.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCholesky/SimplicialCholesky.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h
+../Core/util/NonMPL2.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/NonMPL2.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/AmbiVector.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/CompressedStorage.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/MappedSparseMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseAssign.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseBlock.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseColEtree.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseCompressedBase.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseCwiseBinaryOp.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseCwiseUnaryOp.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseDenseProduct.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseDiagonalProduct.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseDot.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseFuzzy.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseMap.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseMatrixBase.h
+../plugins/CommonCwiseUnaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h
+../plugins/CommonCwiseBinaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/CommonCwiseBinaryOps.h
+../plugins/MatrixCwiseUnaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
+../plugins/MatrixCwiseBinaryOps.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
+../plugins/BlockMethods.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/BlockMethods.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparsePermutation.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseProduct.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseRedux.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseRef.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseSelfAdjointView.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseSolverBase.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseSparseProductWithPruning.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseTranspose.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseTriangularView.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseUtil.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseVector.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/SparseView.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseCore/TriangularSolver.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLUImpl.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_Memory.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_Structs.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_Utils.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_column_bmod.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_column_dfs.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_gemm_kernel.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_kernel_bmod.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_panel_bmod.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_panel_dfs.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_pivotL.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_pruneL.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseLU/SparseLU_relax_snode.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/SparseQR/SparseQR.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/Image.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/Kernel.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/RealSvd2x2.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/blas.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/lapacke.h
+lapacke_config.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/lapacke_config.h
+stdlib.h
+-
+complex.h
+-
+complex.h
+-
+lapacke_mangling.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/lapacke_mangling.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/misc/lapacke_mangling.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/ArrayCwiseBinaryOps.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/ArrayCwiseUnaryOps.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/BlockMethods.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/CommonCwiseBinaryOps.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/unsupported/Eigen/SparseExtra
+../../Eigen/Sparse
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/Sparse
+../../Eigen/src/Core/util/DisableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/DisableStupidWarnings.h
+vector
+-
+map
+-
+cstdlib
+-
+cstring
+-
+algorithm
+-
+fstream
+-
+sstream
+-
+google/dense_hash_map
+-
+src/SparseExtra/DynamicSparseMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/DynamicSparseMatrix.h
+src/SparseExtra/BlockOfDynamicSparseMatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/BlockOfDynamicSparseMatrix.h
+src/SparseExtra/RandomSetter.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/RandomSetter.h
+src/SparseExtra/MarketIO.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/MarketIO.h
+dirent.h
+-
+src/SparseExtra/MatrixMarketIterator.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/MatrixMarketIterator.h
+../../Eigen/src/Core/util/ReenableStupidWarnings.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/BlockOfDynamicSparseMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/DynamicSparseMatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/MarketIO.h
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/MatrixMarketIterator.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/eigen/unsupported/Eigen/src/SparseExtra/RandomSetter.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/glad/include/KHR/khrplatform.h
+stdint.h
+-
+inttypes.h
+-
+stdint.h
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/glad/include/glad/glad.h
+windows.h
+-
+stddef.h
+-
+KHR/khrplatform.h
+-
+inttypes.h
+-
+inttypes.h
+-
+inttypes.h
+-
+stdint.h
+-
+stdint.h
+-
+inttypes.h
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/external/glfw/include/GLFW/glfw3.h
+stddef.h
+-
+stdint.h
+-
+vulkan/vulkan.h
+-
+GLES/gl.h
+-
+GLES/glext.h
+-
+GLES2/gl2.h
+-
+GLES2/gl2ext.h
+-
+GLES3/gl3.h
+-
+GLES2/gl2ext.h
+-
+GLES3/gl31.h
+-
+GLES2/gl2ext.h
+-
+GLES3/gl32.h
+-
+GLES2/gl2ext.h
+-
+OpenGL/gl3.h
+-
+OpenGL/gl3ext.h
+-
+GL/glcorearb.h
+-
+OpenGL/glu.h
+-
+GL/glu.h
+-
+OpenGL/gl.h
+-
+GL/gl.h
+-
+GL/glext.h
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/EPS.cpp
+EPS.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/EPS.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/EPS.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+EPS.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/EPS.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/Hit.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/IndexComparison.h
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/LinSpaced.h
+Eigen/Core
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/MshLoader.cpp
+MshLoader.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/MshLoader.h
+cassert
+-
+iostream
+-
+sstream
+-
+vector
+-
+string.h
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/MshLoader.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+fstream
+-
+map
+-
+string
+-
+vector
+-
+algorithm
+-
+MshLoader.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/MshLoader.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/PI.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/SortableRow.h
+Eigen/Core
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/accumarray.cpp
+accumarray.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/accumarray.h
+cassert
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/accumarray.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+accumarray.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/accumarray.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/adjacency_list.cpp
+adjacency_list.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/adjacency_list.h
+verbose.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/verbose.h
+algorithm
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/adjacency_list.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+Eigen/Sparse
+-
+vector
+-
+adjacency_list.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/adjacency_list.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/axis_angle_to_quat.cpp
+axis_angle_to_quat.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/axis_angle_to_quat.h
+EPS.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/EPS.h
+cmath
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/axis_angle_to_quat.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+axis_angle_to_quat.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/axis_angle_to_quat.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/barycenter.cpp
+barycenter.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/barycenter.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/barycenter.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+barycenter.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/barycenter.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/basename.cpp
+basename.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/basename.h
+algorithm
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/basename.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+string
+-
+basename.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/basename.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/boundary_facets.cpp
+boundary_facets.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/boundary_facets.h
+face_occurrences.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/face_occurrences.h
+list_to_matrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/list_to_matrix.h
+matrix_to_list.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/matrix_to_list.h
+sort.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sort.h
+unique_rows.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unique_rows.h
+accumarray.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/accumarray.h
+slice_mask.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice_mask.h
+Eigen/Core
+-
+map
+-
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/boundary_facets.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+vector
+-
+boundary_facets.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/boundary_facets.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/canonical_quaternions.cpp
+canonical_quaternions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/canonical_quaternions.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/canonical_quaternions.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+canonical_quaternions.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/canonical_quaternions.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/colon.cpp
+colon.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/colon.h
+LinSpaced.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/LinSpaced.h
+cstdio
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/colon.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+colon.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/colon.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/colormap.cpp
+colormap.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/colormap.h
+algorithm
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/colormap.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+colormap.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/colormap.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cotmatrix.cpp
+cotmatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cotmatrix.h
+vector
+-
+cstdio
+-
+cotmatrix_entries.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cotmatrix_entries.h
+iostream
+-
+massmatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix.h
+pinv.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/pinv.h
+cotmatrix_entries.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cotmatrix_entries.h
+diag.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/diag.h
+massmatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix.h
+Eigen/Geometry
+-
+Eigen/QR
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cotmatrix.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+Eigen/Sparse
+-
+cotmatrix.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cotmatrix.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cotmatrix_entries.cpp
+cotmatrix_entries.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cotmatrix_entries.h
+doublearea.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/doublearea.h
+squared_edge_lengths.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/squared_edge_lengths.h
+edge_lengths.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/edge_lengths.h
+face_areas.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/face_areas.h
+volume.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/volume.h
+dihedral_angles.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dihedral_angles.h
+verbose.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/verbose.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cotmatrix_entries.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+cotmatrix_entries.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cotmatrix_entries.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cross.cpp
+cross.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cross.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cross.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+cross.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cross.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/default_num_threads.cpp
+default_num_threads.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/default_num_threads.h
+cstdlib
+-
+thread
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/default_num_threads.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+default_num_threads.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/default_num_threads.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/deprecated.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/diag.cpp
+diag.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/diag.h
+verbose.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/verbose.h
+iostream
+-
+unsupported/Eigen/SparseExtra
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/diag.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Sparse
+-
+diag.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/diag.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dihedral_angles.cpp
+dihedral_angles.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dihedral_angles.h
+edge_lengths.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/edge_lengths.h
+face_areas.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/face_areas.h
+cassert
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dihedral_angles.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+dihedral_angles.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dihedral_angles.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dirname.cpp
+dirname.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dirname.h
+algorithm
+-
+verbose.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/verbose.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dirname.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+string
+-
+dirname.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dirname.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dot.cpp
+dot.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dot.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dot.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+dot.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dot.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/doublearea.cpp
+doublearea.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/doublearea.h
+edge_lengths.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/edge_lengths.h
+parallel_for.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/parallel_for.h
+sort.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sort.h
+cassert
+-
+iostream
+-
+limits
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/doublearea.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+doublearea.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/doublearea.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/edge_lengths.cpp
+edge_lengths.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/edge_lengths.h
+squared_edge_lengths.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/squared_edge_lengths.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/edge_lengths.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+edge_lengths.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/edge_lengths.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/face_areas.cpp
+face_areas.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/face_areas.h
+edge_lengths.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/edge_lengths.h
+doublearea.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/doublearea.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/face_areas.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+face_areas.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/face_areas.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/face_occurrences.cpp
+face_occurrences.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/face_occurrences.h
+list_to_matrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/list_to_matrix.h
+matrix_to_list.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/matrix_to_list.h
+map
+-
+sort.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sort.h
+cassert
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/face_occurrences.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+vector
+-
+face_occurrences.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/face_occurrences.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_dialog_open.cpp
+file_dialog_open.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_dialog_open.h
+cstdio
+-
+cstring
+-
+windows.h
+-
+Commdlg.h
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_dialog_open.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+string
+-
+file_dialog_open.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_dialog_open.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_dialog_save.cpp
+file_dialog_save.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_dialog_save.h
+cstdio
+-
+cstring
+-
+windows.h
+-
+Commdlg.h
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_dialog_save.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+string
+-
+file_dialog_save.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_dialog_save.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_utils.cpp
+file_utils.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_utils.h
+cstring
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_utils.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+streambuf
+-
+istream
+-
+string
+-
+vector
+-
+file_utils.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_utils.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/find.cpp
+find.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/find.h
+verbose.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/verbose.h
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/find.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+Eigen/Sparse
+-
+find.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/find.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/frustum.cpp
+frustum.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/frustum.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/frustum.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+frustum.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/frustum.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/get_seconds.cpp
+get_seconds.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/get_seconds.h
+chrono
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/get_seconds.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+get_seconds.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/get_seconds.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/internal_angles.cpp
+internal_angles.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/internal_angles.h
+squared_edge_lengths.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/squared_edge_lengths.h
+parallel_for.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/parallel_for.h
+get_seconds.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/get_seconds.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/internal_angles.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+deprecated.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/deprecated.h
+Eigen/Core
+-
+internal_angles.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/internal_angles.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/list_to_matrix.cpp
+list_to_matrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/list_to_matrix.h
+cassert
+-
+cstdio
+-
+Eigen/Dense
+-
+max_size.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/max_size.h
+min_size.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/min_size.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/list_to_matrix.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+vector
+-
+array
+-
+Eigen/Core
+-
+list_to_matrix.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/list_to_matrix.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/look_at.cpp
+look_at.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/look_at.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/look_at.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+look_at.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/look_at.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix.cpp
+massmatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix.h
+massmatrix_intrinsic.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix_intrinsic.h
+edge_lengths.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/edge_lengths.h
+normalize_row_sums.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/normalize_row_sums.h
+sparse.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sparse.h
+doublearea.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/doublearea.h
+repmat.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/repmat.h
+Eigen/Geometry
+-
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+Eigen/Sparse
+-
+massmatrix.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix_intrinsic.cpp
+massmatrix_intrinsic.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix_intrinsic.h
+edge_lengths.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/edge_lengths.h
+normalize_row_sums.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/normalize_row_sums.h
+sparse.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sparse.h
+doublearea.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/doublearea.h
+repmat.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/repmat.h
+Eigen/Geometry
+-
+iostream
+-
+cassert
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix_intrinsic.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+massmatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix.h
+Eigen/Dense
+-
+Eigen/Sparse
+-
+massmatrix_intrinsic.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix_intrinsic.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/material_colors.h
+Eigen/Core
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/matrix_to_list.cpp
+matrix_to_list.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/matrix_to_list.h
+Eigen/Dense
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/matrix_to_list.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+vector
+-
+Eigen/Dense
+-
+matrix_to_list.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/matrix_to_list.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/max_size.cpp
+max_size.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/max_size.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/max_size.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+vector
+-
+max_size.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/max_size.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/min_size.cpp
+min_size.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/min_size.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/min_size.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+vector
+-
+min_size.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/min_size.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/normalize_quat.cpp
+normalize_quat.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/normalize_quat.h
+EPS.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/EPS.h
+cmath
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/normalize_quat.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+normalize_quat.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/normalize_quat.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/normalize_row_sums.cpp
+normalize_row_sums.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/normalize_row_sums.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/normalize_row_sums.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+normalize_row_sums.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/normalize_row_sums.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/MeshGL.cpp
+MeshGL.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/MeshGL.h
+bind_vertex_attrib_array.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/bind_vertex_attrib_array.h
+create_shader_program.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/create_shader_program.h
+destroy_shader_program.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/destroy_shader_program.h
+verasansmono_compressed.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/verasansmono_compressed.h
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/MeshGL.h
+igl/igl_inline.h
+-
+Eigen/Core
+-
+MeshGL.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/MeshGL.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/ViewerCore.cpp
+ViewerCore.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/ViewerCore.h
+ViewerData.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/ViewerData.h
+gl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/gl.h
+../quat_to_mat.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/quat_to_mat.h
+../snap_to_fixed_up.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_to_fixed_up.h
+../look_at.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/look_at.h
+../frustum.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/frustum.h
+../ortho.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/ortho.h
+../massmatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/massmatrix.h
+../barycenter.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/barycenter.h
+../PI.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/PI.h
+Eigen/Geometry
+-
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/ViewerCore.h
+igl/opengl/MeshGL.h
+-
+igl/igl_inline.h
+-
+Eigen/Geometry
+-
+Eigen/Core
+-
+igl/serialize.h
+-
+ViewerCore.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/ViewerCore.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/ViewerData.cpp
+ViewerData.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/ViewerData.h
+ViewerCore.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/ViewerCore.h
+../per_face_normals.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/per_face_normals.h
+../material_colors.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/material_colors.h
+../per_vertex_normals.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/per_vertex_normals.h
+gl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/gl.h
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/ViewerData.h
+MeshGL.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/MeshGL.h
+igl/igl_inline.h
+-
+igl/colormap.h
+-
+cassert
+-
+cstdint
+-
+Eigen/Core
+-
+memory
+-
+vector
+-
+igl/serialize.h
+-
+ViewerData.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/ViewerData.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/bind_vertex_attrib_array.cpp
+bind_vertex_attrib_array.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/bind_vertex_attrib_array.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/bind_vertex_attrib_array.h
+gl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/gl.h
+../igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+string
+-
+bind_vertex_attrib_array.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/bind_vertex_attrib_array.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/create_shader_program.cpp
+create_shader_program.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/create_shader_program.h
+load_shader.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/load_shader.h
+print_program_info_log.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/print_program_info_log.h
+iostream
+-
+cstdio
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/create_shader_program.h
+../igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+gl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/gl.h
+string
+-
+map
+-
+create_shader_program.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/create_shader_program.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/destroy_shader_program.cpp
+destroy_shader_program.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/destroy_shader_program.h
+report_gl_error.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/report_gl_error.h
+cstdio
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/destroy_shader_program.h
+../igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+gl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/gl.h
+destroy_shader_program.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/destroy_shader_program.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/gl.h
+glad/glad.h
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/glfw/Viewer.cpp
+Viewer.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/glfw/Viewer.h
+chrono
+-
+thread
+-
+Eigen/LU
+-
+../gl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/gl.h
+GLFW/glfw3.h
+-
+cmath
+-
+cstdio
+-
+sstream
+-
+iomanip
+-
+iostream
+-
+fstream
+-
+algorithm
+-
+limits
+-
+cassert
+-
+igl/project.h
+-
+igl/get_seconds.h
+-
+igl/readOBJ.h
+-
+igl/read_triangle_mesh.h
+-
+igl/adjacency_list.h
+-
+igl/writeOBJ.h
+-
+igl/writeOFF.h
+-
+igl/massmatrix.h
+-
+igl/file_dialog_open.h
+-
+igl/file_dialog_save.h
+-
+igl/quat_mult.h
+-
+igl/axis_angle_to_quat.h
+-
+igl/trackball.h
+-
+igl/two_axis_valuator_fixed_up.h
+-
+igl/snap_to_canonical_view_quat.h
+-
+igl/unproject.h
+-
+igl/serialize.h
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/glfw/Viewer.h
+../../igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+../MeshGL.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/MeshGL.h
+../ViewerCore.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/ViewerCore.h
+../ViewerData.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/ViewerData.h
+ViewerPlugin.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/glfw/ViewerPlugin.h
+Eigen/Core
+-
+Eigen/Geometry
+-
+vector
+-
+string
+-
+cstdint
+-
+Viewer.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/glfw/Viewer.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/glfw/ViewerPlugin.h
+string
+-
+igl/igl_inline.h
+-
+vector
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/load_shader.cpp
+load_shader.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/load_shader.h
+print_shader_info_log.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/print_shader_info_log.h
+cstdio
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/load_shader.h
+../igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+gl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/gl.h
+string
+-
+load_shader.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/load_shader.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/print_program_info_log.cpp
+print_program_info_log.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/print_program_info_log.h
+cstdio
+-
+stdlib.h
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/print_program_info_log.h
+../igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+gl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/gl.h
+print_program_info_log.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/print_program_info_log.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/print_shader_info_log.cpp
+print_shader_info_log.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/print_shader_info_log.h
+cstdio
+-
+stdlib.h
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/print_shader_info_log.h
+../igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+gl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/gl.h
+print_shader_info_log.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/print_shader_info_log.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/report_gl_error.cpp
+report_gl_error.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/report_gl_error.h
+../verbose.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/verbose.h
+cstdio
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/report_gl_error.h
+../igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+gl.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/gl.h
+string
+-
+report_gl_error.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/report_gl_error.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/verasansmono_compressed.cpp
+verasansmono_compressed.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/verasansmono_compressed.h
+string
+-
+iostream
+-
+cassert
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/verasansmono_compressed.h
+igl/opengl/../igl_inline.h
+-
+verasansmono_compressed.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/opengl/verasansmono_compressed.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/ortho.cpp
+ortho.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/ortho.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/ortho.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+ortho.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/ortho.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/parallel_for.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+functional
+-
+default_num_threads.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/default_num_threads.h
+cmath
+-
+cassert
+-
+thread
+-
+vector
+-
+algorithm
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/pathinfo.cpp
+pathinfo.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/pathinfo.h
+dirname.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dirname.h
+basename.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/basename.h
+verbose.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/verbose.h
+algorithm
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/pathinfo.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+string
+-
+pathinfo.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/pathinfo.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/per_face_normals.cpp
+per_face_normals.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/per_face_normals.h
+Eigen/Geometry
+-
+cotmatrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cotmatrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/per_face_normals.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+per_face_normals.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/per_face_normals.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/per_vertex_normals.cpp
+per_vertex_normals.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/per_vertex_normals.h
+get_seconds.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/get_seconds.h
+per_face_normals.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/per_face_normals.h
+doublearea.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/doublearea.h
+parallel_for.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/parallel_for.h
+internal_angles.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/internal_angles.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/per_vertex_normals.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+per_vertex_normals.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/per_vertex_normals.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/pinv.cpp
+pinv.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/pinv.h
+Eigen/SVD
+-
+limits
+-
+cmath
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/pinv.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+deprecated.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/deprecated.h
+Eigen/Core
+-
+pinv.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/pinv.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/polygon_corners.cpp
+polygon_corners.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/polygon_corners.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/polygon_corners.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+vector
+-
+polygon_corners.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/polygon_corners.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/polygons_to_triangles.cpp
+polygons_to_triangles.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/polygons_to_triangles.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/polygons_to_triangles.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+vector
+-
+polygons_to_triangles.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/polygons_to_triangles.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/project.cpp
+project.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/project.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/project.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+project.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/project.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/quat_mult.cpp
+quat_mult.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/quat_mult.h
+cassert
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/quat_mult.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+quat_mult.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/quat_mult.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/quat_to_mat.cpp
+quat_to_mat.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/quat_to_mat.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/quat_to_mat.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+quat_to_mat.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/quat_to_mat.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/ray_mesh_intersect.cpp
+ray_mesh_intersect.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/ray_mesh_intersect.h
+raytri.c
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/raytri.c
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/ray_mesh_intersect.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Hit.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/Hit.h
+Eigen/Core
+-
+vector
+-
+ray_mesh_intersect.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/ray_mesh_intersect.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/raytri.c
+math.h
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readMESH.cpp
+readMESH.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readMESH.h
+Eigen/Core
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readMESH.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+string
+-
+vector
+-
+cstdio
+-
+readMESH.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readMESH.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readMSH.cpp
+readMSH.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readMSH.h
+MshLoader.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/MshLoader.h
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readMSH.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+string
+-
+vector
+-
+readMSH.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readMSH.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readOBJ.cpp
+readOBJ.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readOBJ.h
+list_to_matrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/list_to_matrix.h
+max_size.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/max_size.h
+min_size.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/min_size.h
+polygon_corners.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/polygon_corners.h
+polygons_to_triangles.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/polygons_to_triangles.h
+iostream
+-
+cstdio
+-
+fstream
+-
+sstream
+-
+iterator
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readOBJ.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+string
+-
+vector
+-
+cstdio
+-
+readOBJ.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readOBJ.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readOFF.cpp
+readOFF.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readOFF.h
+list_to_matrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/list_to_matrix.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readOFF.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+string
+-
+vector
+-
+cstdio
+-
+readOFF.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readOFF.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readPLY.cpp
+readPLY.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readPLY.h
+string
+-
+set
+-
+fstream
+-
+iostream
+-
+Eigen/Core
+-
+tinyply.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/tinyply.h
+file_utils.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_utils.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readPLY.h
+igl/igl_inline.h
+-
+Eigen/Core
+-
+string
+-
+vector
+-
+tinyply.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/tinyply.h
+readPLY.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readPLY.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readSTL.cpp
+readSTL.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readSTL.h
+list_to_matrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/list_to_matrix.h
+string_utils.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/string_utils.h
+file_utils.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/file_utils.h
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readSTL.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+string
+-
+istream
+-
+vector
+-
+array
+-
+readSTL.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readSTL.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readWRL.cpp
+readWRL.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readWRL.h
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readWRL.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+string
+-
+vector
+-
+cstdio
+-
+readWRL.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readWRL.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/read_triangle_mesh.cpp
+read_triangle_mesh.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/read_triangle_mesh.h
+list_to_matrix.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/list_to_matrix.h
+readMSH.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readMSH.h
+readMESH.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readMESH.h
+readOBJ.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readOBJ.h
+readOFF.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readOFF.h
+readSTL.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readSTL.h
+readPLY.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readPLY.h
+readWRL.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/readWRL.h
+pathinfo.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/pathinfo.h
+boundary_facets.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/boundary_facets.h
+polygon_corners.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/polygon_corners.h
+polygons_to_triangles.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/polygons_to_triangles.h
+algorithm
+-
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/read_triangle_mesh.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+string
+-
+cstdio
+-
+vector
+-
+read_triangle_mesh.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/read_triangle_mesh.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/reorder.cpp
+reorder.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/reorder.h
+SortableRow.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/SortableRow.h
+Eigen/Core
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/reorder.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+vector
+-
+stddef.h
+-
+cstdlib
+-
+reorder.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/reorder.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/repmat.cpp
+repmat.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/repmat.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/repmat.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+Eigen/Sparse
+-
+repmat.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/repmat.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/serialize.h
+type_traits
+-
+iostream
+-
+fstream
+-
+cstdint
+-
+numeric
+-
+vector
+-
+set
+-
+map
+-
+memory
+-
+cstdint
+-
+list
+-
+Eigen/Dense
+-
+Eigen/Sparse
+-
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice.cpp
+slice.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice.h
+colon.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/colon.h
+vector
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Sparse
+-
+slice.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice_mask.cpp
+slice_mask.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice_mask.h
+slice.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice.h
+slice_sorted.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice_sorted.h
+find.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/find.h
+cassert
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice_mask.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Sparse
+-
+Eigen/Core
+-
+slice_mask.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice_mask.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice_sorted.cpp
+slice_sorted.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice_sorted.h
+vector
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice_sorted.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+Eigen/Sparse
+-
+slice_sorted.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/slice_sorted.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_points.cpp
+snap_points.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_points.h
+cassert
+-
+limits
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_points.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+snap_points.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_points.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_to_canonical_view_quat.cpp
+snap_to_canonical_view_quat.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_to_canonical_view_quat.h
+canonical_quaternions.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/canonical_quaternions.h
+normalize_quat.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/normalize_quat.h
+cstdio
+-
+cassert
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_to_canonical_view_quat.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Geometry
+-
+snap_to_canonical_view_quat.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_to_canonical_view_quat.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_to_fixed_up.cpp
+snap_to_fixed_up.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_to_fixed_up.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_to_fixed_up.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+Eigen/Geometry
+-
+snap_to_fixed_up.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/snap_to_fixed_up.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sort.cpp
+sort.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sort.h
+SortableRow.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/SortableRow.h
+reorder.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/reorder.h
+IndexComparison.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/IndexComparison.h
+colon.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/colon.h
+parallel_for.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/parallel_for.h
+cassert
+-
+algorithm
+-
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sort.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+vector
+-
+Eigen/Core
+-
+sort.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sort.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sortrows.cpp
+sortrows.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sortrows.h
+get_seconds.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/get_seconds.h
+SortableRow.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/SortableRow.h
+sort.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sort.h
+colon.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/colon.h
+IndexComparison.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/IndexComparison.h
+vector
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sortrows.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+vector
+-
+Eigen/Core
+-
+sortrows.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sortrows.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sparse.cpp
+sparse.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sparse.h
+iostream
+-
+vector
+-
+verbose.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/verbose.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sparse.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+Eigen/Sparse
+-
+sparse.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sparse.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/squared_edge_lengths.cpp
+squared_edge_lengths.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/squared_edge_lengths.h
+parallel_for.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/parallel_for.h
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/squared_edge_lengths.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Dense
+-
+squared_edge_lengths.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/squared_edge_lengths.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/string_utils.cpp
+string_utils.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/string_utils.h
+cstring
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/string_utils.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+string
+-
+string_utils.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/string_utils.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/tinyply.cpp
+tinyply.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/tinyply.h
+algorithm
+-
+functional
+-
+type_traits
+-
+iostream
+-
+cstring
+-
+cassert
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/tinyply.h
+igl/igl_inline.h
+-
+vector
+-
+string
+-
+stdint.h
+-
+cstddef
+-
+sstream
+-
+memory
+-
+unordered_map
+-
+map
+-
+algorithm
+-
+functional
+-
+tinyply.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/tinyply.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/trackball.cpp
+trackball.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/trackball.h
+EPS.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/EPS.h
+dot.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/dot.h
+cross.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cross.h
+axis_angle_to_quat.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/axis_angle_to_quat.h
+quat_mult.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/quat_mult.h
+cmath
+-
+cstdlib
+-
+cassert
+-
+algorithm
+-
+iostream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/trackball.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+Eigen/Geometry
+-
+trackball.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/trackball.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/two_axis_valuator_fixed_up.cpp
+two_axis_valuator_fixed_up.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/two_axis_valuator_fixed_up.h
+PI.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/PI.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/two_axis_valuator_fixed_up.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+Eigen/Geometry
+-
+two_axis_valuator_fixed_up.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/two_axis_valuator_fixed_up.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unique_rows.cpp
+unique_rows.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unique_rows.h
+sortrows.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/sortrows.h
+algorithm
+-
+iostream
+-
+map
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unique_rows.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+vector
+-
+Eigen/Core
+-
+unique_rows.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unique_rows.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject.cpp
+unproject.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject.h
+Eigen/Dense
+-
+Eigen/LU
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+unproject.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject_onto_mesh.cpp
+unproject_onto_mesh.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject_onto_mesh.h
+unproject.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject.h
+unproject_ray.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject_ray.h
+ray_mesh_intersect.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/ray_mesh_intersect.h
+vector
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject_onto_mesh.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Hit.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/Hit.h
+Eigen/Core
+-
+functional
+-
+unproject_onto_mesh.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject_onto_mesh.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject_ray.cpp
+unproject_ray.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject_ray.h
+unproject.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject.h
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject_ray.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+unproject_ray.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/unproject_ray.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/verbose.h
+cstdio
+-
+cstdarg
+-
+string
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/volume.cpp
+volume.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/volume.h
+cross.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/cross.h
+Eigen/Geometry
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/volume.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+volume.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/volume.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/writeOBJ.cpp
+writeOBJ.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/writeOBJ.h
+iostream
+-
+limits
+-
+iomanip
+-
+fstream
+-
+cstdio
+-
+cassert
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/writeOBJ.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+string
+-
+vector
+-
+writeOBJ.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/writeOBJ.cpp
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/writeOFF.cpp
+writeOFF.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/writeOFF.h
+cstdio
+-
+fstream
+-
+
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/writeOFF.h
+igl_inline.h
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/igl_inline.h
+Eigen/Core
+-
+string
+-
+writeOFF.cpp
+/home/laura/Documents/Polytechnique/MScT - M1/INF574/libigl/include/igl/writeOFF.cpp
+

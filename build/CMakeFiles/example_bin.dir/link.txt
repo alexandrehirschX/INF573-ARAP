@@ -1,0 +1,1 @@
+/usr/bin/c++   -fPIC  -rdynamic CMakeFiles/example_bin.dir/main.cpp.o  -o example_bin  /usr/lib/x86_64-linux-gnu/libOpenGL.so glad/libglad.a glfw/src/libglfw3.a -lpthread -lrt -lm -ldl 
