@@ -27,11 +27,12 @@ RowVector3d compute_barycenter(MatrixXd &V)
 struct State
 {
   // Rest and transformed control points
-  // only the orange vertices of CV1 will be able to move, the others are fixed, CU are the transformed CV1 points, CW are the unchanged fixed red points
+  // Only the orange vertices of CV1 will be able to move, the others are fixed, CU are the transformed CV1 points
   // CC is the colour matrix, and CI holds the indices of points in CC that are coloured orange, i.e (can move)
-  MatrixXd CV1, CC, CI, CU, CW;
+  MatrixXd CV1, CC, CI, CU;
+  // When true we can place orange control points 
   bool placing_handles = true;
-  // boolean for if you're placing control points that you absolutely do not want to move
+  // When trye we can place red control points
   bool placing_cp = false;
 } s;
 
@@ -92,14 +93,14 @@ int main(int argc, char *argv[]){
   igl::opengl::glfw::Viewer viewer;
 
   std::cout << R"(
-[click]  To place new control point
-[drag]   To move control point
-[space]  Toggle whether placing control points or deforming
-U,u      Update deformation (i.e., run another iteration of solver)
-R,r      Reset control points 
-⌘ Z      Undo
-⌘ ⇧ Z    Redo
-)";
+  [click]  To place new control point
+  [drag]   To move control point
+  [space]  Toggle whether placing control points or deforming
+  U,u      Update deformation (i.e., run another iteration of solver)
+  R,r      Reset control points 
+  ⌘ Z      Undo
+  ⌘ ⇧ Z    Redo
+  )";
 
 
   const auto & update = [&]()
@@ -210,12 +211,10 @@ R,r      Reset control points
     else{
       // Move closest control point
       MatrixXf CP;
-      std::cout << "helllo ?" << std::endl;
       igl::project(
         MatrixXf(s.CU.cast<float>()),
         viewer.core().view,
         viewer.core().proj, viewer.core().viewport, CP);
-      std::cout << "ive been wondering if this worked" << std::endl;
       VectorXf D = (CP.rowwise()-last_mouse).rowwise().norm();
       sel = (D.minCoeff(&sel) < 30)?sel:-1;
       if(sel != -1)
@@ -250,15 +249,13 @@ R,r      Reset control points
         viewer.core().proj,
         viewer.core().viewport,
         last_scene);
-      // s.CU.row(sel) += (drag_scene-last_scene).cast<double>();
-      // for(int i = 0; i < s.CU.rows(); i++) {
-      //   s.CU.row(i) += (drag_scene-last_scene).cast<double>();
-      // }
+
       for (int i = 0; i < s.CI.rows(); i  ++){
-        // index of orange point
+        // Index of orange point in s.CV1
         int idx = s.CI(i, 0);
         s.CU.row(idx) += (drag_scene-last_scene).cast<double>();
       }
+
       last_mouse = drag_mouse;
       update();
       return true;
@@ -303,28 +300,18 @@ R,r      Reset control points
         if(!s.placing_handles && s.CV1.rows()>0)
         {
           // Switching to deformation mode
-          // std::cout << "hellloooo" << std::endl;
-          // s.CU.conservativeResize(s.CI.rows(), 3);
-          // std::cout << "did we make itttttttttt" << std::endl;
-          // for (int i = 0; i < s.CI.rows(); i  ++){
-          //   std::cout << i << std::endl;
-          //   // index of orange point
-          //   int idx = s.CI(i, 0);
-          //   s.CU.row(i) +=  s.CV1.row(idx);
-          // }
           s.CU = s.CV1;
+
           VectorXi b;
           igl::snap_points(s.CV1,V,b);
           // PRECOMPUTATION FOR DEFORMATION
-          std::cout << "hi what ABOUT here!!!!!!!!!!" << std::endl;
           M.fix(b);
-          std::cout << "YOOOOOOO" << std::endl;
-          //arap_precompute(V,F,b,arap_data,arap_K);
         }
         break;
 
       case 'V':
       case 'v':{
+        // Changing direction of 
         dir += 1;
         if(dir == 3) dir = 0; 
         break;
@@ -389,6 +376,7 @@ R,r      Reset control points
   viewer.core().is_animating = false; //true;
   viewer.data().face_based = true;
   update();
+  
   viewer.launch();
   return EXIT_SUCCESS;
 }
