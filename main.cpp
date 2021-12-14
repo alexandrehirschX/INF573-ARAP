@@ -5,7 +5,6 @@
 #include <igl/unproject.h>
 #include <igl/unproject_onto_mesh.h>
 #include <igl/snap_points.h>
-#include <stack>
 
 #include "MeshTransformation.cpp"
 #include "shape.cpp"
@@ -51,32 +50,6 @@ int main(int argc, char *argv[]){
   MeshTransformation rotationZm(-0.2, 2);
   std::vector<MeshTransformation> rotationm{rotationXm, rotationYm, rotationZm};
 
-  // Undo Management
-  std::stack<State> undo_stack,redo_stack;
-  const auto push_undo = [&](State & _s=s)
-  {
-    undo_stack.push(_s);
-    // clear
-    redo_stack = std::stack<State>();
-  };
-  const auto undo = [&]()
-  {
-    if(!undo_stack.empty())
-    {
-      redo_stack.push(s);
-      s = undo_stack.top();
-      undo_stack.pop();
-    }
-  };
-  const auto redo = [&]()
-  {
-    if(!redo_stack.empty())
-    {
-      undo_stack.push(s);
-      s = redo_stack.top();
-      redo_stack.pop();
-    }
-  };
 
   MatrixXd V,U;
   MatrixXi F;
@@ -96,7 +69,7 @@ int main(int argc, char *argv[]){
 
   std::cout << R"(
   [click]  To place new control point
-  [drag]   To move control point
+  [drag]   To move handle points
   [space]  Toggle whether placing points or deforming
   C,c      Toggle whether placing fixed or handle control points
   V,v      Toggle rotation direction (X, Y, Z)
@@ -104,8 +77,6 @@ int main(int argc, char *argv[]){
   N,n      Negative angle rotation 
   U,u      Update deformation (i.e., run another iteration of solver)
   R,r      Reset control points 
-  ⌘ Z      Undo
-  ⌘ ⇧ Z    Redo
   )";
 
 
@@ -165,7 +136,6 @@ int main(int argc, char *argv[]){
         RowVector3d new_c = V.row(F(fid,c));
         if(s.CV1.size()==0 || (s.CV1.rowwise()-new_c).rowwise().norm().minCoeff() > 0)
         {
-          push_undo();
           // Snap to closest vertex on hit face
           s.CV1.conservativeResize(s.CV1.rows()+1,3);
           s.CV1.row(s.CV1.rows()-1) = new_c;
@@ -200,7 +170,6 @@ int main(int argc, char *argv[]){
         RowVector3d new_c = V.row(F(fid,c));
         if(s.CV1.size()==0 || (s.CV1.rowwise()-new_c).rowwise().norm().minCoeff() > 0)
         {
-          push_undo();
           // Snap to closest vertex on hit face
           s.CV1.conservativeResize(s.CV1.rows()+1,3);
           s.CV1.row(s.CV1.rows()-1) = new_c;
@@ -225,7 +194,6 @@ int main(int argc, char *argv[]){
       if(sel != -1)
       {
         last_mouse(2) = CP(sel,2);
-        push_undo();
         update();
         return true;
       }
@@ -260,7 +228,6 @@ int main(int argc, char *argv[]){
         int idx = s.CI(i, 0);
         s.CU.row(idx) += (drag_scene-last_scene).cast<double>();
       }
-
       last_mouse = drag_mouse;
       update();
       return true;
@@ -281,7 +248,6 @@ int main(int argc, char *argv[]){
       case 'R':
       case 'r':
       {
-        push_undo();
         s.CU = s.CV1;
         break;
       }
@@ -294,13 +260,11 @@ int main(int argc, char *argv[]){
       case 'C' :
       case 'c' :
       {
-        //push_undo();
         s.placing_cp ^=1;
         s.placing_handles ^= 1;
         break;
       }
-      case ' ':
-        push_undo();
+      case ' ':{
         s.placing_handles ^= 1;
         if(!s.placing_handles && s.CV1.rows()>0)
         {
@@ -313,6 +277,7 @@ int main(int argc, char *argv[]){
           M.fix(b);
         }
         break;
+      }
 
       case 'V':
       case 'v':{
@@ -359,18 +324,6 @@ int main(int argc, char *argv[]){
     return true;
   };
 
-  // Special callback for handling undo
-  viewer.callback_key_down = 
-    [&](igl::opengl::glfw::Viewer &, unsigned char key, int mod)->bool
-  {
-    if(key == 'Z' && (mod & GLFW_MOD_SUPER))
-    {
-      (mod & GLFW_MOD_SHIFT) ? redo() : undo();
-      update();
-      return true;
-    }
-    return false;
-  };
   viewer.callback_pre_draw = 
     [&](igl::opengl::glfw::Viewer &)->bool
   {
