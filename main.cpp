@@ -15,8 +15,11 @@ using namespace Eigen;
 struct State
 {
   // Rest and transformed control points
-  MatrixXd CV, CU;
+  // CV1 will move, CV2 will be non-moving control points, CU are the transformed CV1 points
+  MatrixXd CV1, CV2, CU;
   bool placing_handles = true;
+  // boolean for if you're placing control points that you absolutely do not want to move
+  bool placing_cp = false;
 } s;
 
 
@@ -78,6 +81,7 @@ R,r      Reset control points
   {
     // predefined colors
     const RowVector3d orange(1.0,0.7,0.2);
+    const RowVector3d red(1.0,0.0,0.0);
     const RowVector3d yellow(1.0,0.9,0.2);
     const RowVector3d blue(0.2,0.3,0.8);
     const RowVector3d green(0.2,0.6,0.3);
@@ -85,9 +89,23 @@ R,r      Reset control points
     {
       viewer.data().set_vertices(V);
       viewer.data().set_colors(blue);
-      viewer.data().set_points(s.CV,orange);
-    }else
-    {
+      viewer.data().set_points(s.CV1, orange);
+      if (s.CV2.size() != 0){
+        viewer.data().set_points(s.CV2, red);
+      }
+    }
+    else if (s.placing_cp) {
+      viewer.data().set_vertices(V);
+      viewer.data().set_colors(blue);
+      std::cout << "Hello" << std::endl;
+      viewer.data().set_points(s.CV1, orange);
+      viewer.data().set_points(s.CV2, red);
+      // if (s.CV1.size() != 0){
+      //   std::cout << "i made it here" << std::endl;
+      //   viewer.data().set_points(s.CV1, orange);
+      // }
+    }
+    else{
       // SOLVE FOR DEFORMATION
       M.deform(s.CU);
       U = M.ARAP(1);
@@ -104,8 +122,7 @@ R,r      Reset control points
   {
     last_mouse = RowVector3f(
       viewer.current_mouse_x,viewer.core().viewport(3)-viewer.current_mouse_y,0);
-    if(s.placing_handles)
-    {
+    if(s.placing_handles){
       // Find closest point on mesh to mouse position
       int fid;
       Vector3f bary;
@@ -120,18 +137,48 @@ R,r      Reset control points
         long c;
         bary.maxCoeff(&c);
         RowVector3d new_c = V.row(F(fid,c));
-        if(s.CV.size()==0 || (s.CV.rowwise()-new_c).rowwise().norm().minCoeff() > 0)
+        if(s.CV1.size()==0 || (s.CV1.rowwise()-new_c).rowwise().norm().minCoeff() > 0)
         {
           push_undo();
-          s.CV.conservativeResize(s.CV.rows()+1,3);
+          s.CV1.conservativeResize(s.CV1.rows()+1,3);
           // Snap to closest vertex on hit face
-          s.CV.row(s.CV.rows()-1) = new_c;
+          s.CV1.row(s.CV1.rows()-1) = new_c;
           update();
           return true;
         }
       }
-    }else
-    {
+    }
+    // Setting control points that will NOT move 
+    else if(s.placing_cp) {
+      // Find closest point on mesh to mouse position
+      int fid;
+      Vector3f bary;
+      if(igl::unproject_onto_mesh(
+        last_mouse.head(2),
+        viewer.core().view,
+        viewer.core().proj, 
+        viewer.core().viewport, 
+        V, F, 
+        fid, bary))
+      {
+        long c;
+        bary.maxCoeff(&c);
+        RowVector3d new_c = V.row(F(fid,c));
+        if(s.CV2.size()==0 || (s.CV2.rowwise()-new_c).rowwise().norm().minCoeff() > 0)
+        {
+          push_undo();
+          s.CV2.conservativeResize(s.CV2.rows()+1,3);
+          // Snap to closest vertex on hit face
+          s.CV2.row(s.CV2.rows()-1) = new_c;
+          std::cout << s.CV1.rows() << std::endl;
+          std::cout << s.placing_handles << std::endl;
+          std::cout << s.placing_cp << std::endl;d:
+          update();
+          return true;
+        }
+      }
+    }
+    else{
       // Move closest control point
       MatrixXf CP;
       igl::project(
@@ -172,7 +219,11 @@ R,r      Reset control points
         viewer.core().proj,
         viewer.core().viewport,
         last_scene);
-      s.CU.row(sel) += (drag_scene-last_scene).cast<double>();
+      // s.CU.row(sel) += (drag_scene-last_scene).cast<double>();
+      /// HARD CODED HERE
+      for (int i = 0; i < 12; i ++ ){
+        s.CU.row(i) += (drag_scene-last_scene).cast<double>();
+      }
       last_mouse = drag_mouse;
       update();
       return true;
@@ -194,7 +245,7 @@ R,r      Reset control points
       case 'r':
       {
         push_undo();
-        s.CU = s.CV;
+        s.CU = s.CV1;
         break;
       }
       case 'U':
@@ -203,15 +254,23 @@ R,r      Reset control points
         // Just trigger an update
         break;
       }
+      case 'C' :
+      case 'c' :
+      {
+        push_undo();
+        s.placing_cp ^=1;
+        s.placing_handles ^= 1;
+        break;
+      }
       case ' ':
         push_undo();
         s.placing_handles ^= 1;
-        if(!s.placing_handles && s.CV.rows()>0)
+        if(!s.placing_handles && s.CV1.rows()>0)
         {
           // Switching to deformation mode
-          s.CU = s.CV;
+          s.CU = s.CV1;
           VectorXi b;
-          igl::snap_points(s.CV,V,b);
+          igl::snap_points(s.CV1,V,b);
           // PRECOMPUTATION FOR DEFORMATION
           M.fix(b);
 
