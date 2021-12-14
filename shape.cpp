@@ -12,10 +12,6 @@ using namespace Eigen;
 
 typedef Triplet<double> T;
 
-float calc_cotangent(Vector3d v1, Vector3d v2){
-    return 1/tan(acos(v1.normalized().dot(v2.normalized())));
-}
-
 class Shape {
   public:
     MatrixXd V1, V2, W, b;
@@ -139,6 +135,10 @@ class Shape {
           }
         }
       }
+    }
+
+    float calc_cotangent(Vector3d v1, Vector3d v2){
+      return 1/tan(acos(v1.normalized().dot(v2.normalized())));
     }
 
     void get_weights(){

@@ -7,21 +7,21 @@
 #include <igl/snap_points.h>
 #include <stack>
 
-
+#include "MeshTransformation.cpp"
 #include "shape.cpp"
 
 using namespace Eigen;
 
-
-#define X = 0;
-#define Y = 1;
-#define Z = 2;
-
-void rotate(MatrixXd &M, int dir){
-
-
+RowVector3d compute_barycenter(MatrixXd &V)
+{
+  RowVector3d bar(0., 0., 0.);
+  int n = V.rows();
+  for(int i = 0; i < n;i++){
+    bar += V.row(i);
+  }
+  bar /= n;
+  return bar;
 }
-
 
 
 struct State
@@ -37,6 +37,17 @@ struct State
 
 
 int main(int argc, char *argv[]){
+
+  int dir = 0;
+  MeshTransformation rotationXp(0.2, 0);
+  MeshTransformation rotationYp(0.2, 1);
+  MeshTransformation rotationZp(0.2, 2);
+  std::vector<MeshTransformation> rotationp{rotationXp, rotationYp, rotationZp};
+
+  MeshTransformation rotationXm(-0.2, 0);
+  MeshTransformation rotationYm(-0.2, 1);
+  MeshTransformation rotationZm(-0.2, 2);
+  std::vector<MeshTransformation> rotationm{rotationXm, rotationYm, rotationZm};
 
   // Undo Management
   std::stack<State> undo_stack,redo_stack;
@@ -289,6 +300,25 @@ R,r      Reset control points
           //arap_precompute(V,F,b,arap_data,arap_K);
         }
         break;
+
+      case 'V':
+      case 'v':{
+        dir += 1;
+        if(dir == 3) dir = 0; 
+        break;
+      }
+      case 'B':
+      case 'b':{
+        rotationp[dir].barycenter = compute_barycenter(s.CU);
+        rotationp[dir].transform(s.CU);
+        break;
+      }
+      case 'N':
+      case 'n':{
+        rotationm[dir].barycenter = compute_barycenter(s.CU);
+        rotationm[dir].transform(s.CU);
+        break;
+      }
       default:
         return false;
     }
