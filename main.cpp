@@ -179,6 +179,7 @@ R,r      Reset control points
     }
     return false;
   };
+  
   viewer.callback_mouse_up = [&](igl::opengl::glfw::Viewer&, int, int)->bool
   {
     sel = -1;
@@ -250,7 +251,7 @@ R,r      Reset control points
   };
   viewer.data().set_mesh(V,F);
   viewer.data().show_lines = false;
-  viewer.core().is_animating = true;
+  viewer.core().is_animating = false; //true;
   viewer.data().face_based = true;
   update();
   viewer.launch();
