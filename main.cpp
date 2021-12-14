@@ -86,6 +86,7 @@ int main(int argc, char *argv[]){
 
   // Load input meshes
   igl::read_triangle_mesh((argc>1?argv[1]:"../meshes/bar3.off"),V,F);
+  bool b = argc>2? (bool) argv[2]: false;
   std::cout << V.cols() << std::endl;
   U = V;
   std::cout << "Loading Shape ... " << std::endl;
@@ -382,7 +383,7 @@ int main(int argc, char *argv[]){
   };
   viewer.data().set_mesh(V,F);
   viewer.data().show_lines = true;
-  viewer.core().is_animating = true; //false; //true;
+  viewer.core().is_animating = b; //true;
   viewer.data().face_based = true;
   update();
   
