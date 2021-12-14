@@ -95,7 +95,11 @@ int main(int argc, char *argv[]){
   std::cout << R"(
   [click]  To place new control point
   [drag]   To move control point
-  [space]  Toggle whether placing control points or deforming
+  [space]  Toggle whether placing points or deforming
+  C,c      Toggle whether placing fixed or handle control points
+  V,v      Toggle rotation direction (X, Y, Z)
+  B,b      Positive angle rotation
+  N,n      Negative angle rotation 
   U,u      Update deformation (i.e., run another iteration of solver)
   R,r      Reset control points 
   ⌘ Z      Undo
@@ -319,13 +323,16 @@ int main(int argc, char *argv[]){
       case 'B':
       case 'b':{
         MatrixXd bb(s.CI.rows(), 3);
-        for(int i = 0; i < bb.rows(); i++)
-        {
+        for(int i = 0; i < bb.rows(); i++){
           int idx = s.CI(i, 0);
           bb.row(i) = s.CU.row(idx);
         }
         rotationp[dir].barycenter = compute_barycenter(bb);
         rotationp[dir].transform(bb);
+        for(int i = 0; i < bb.rows(); i++){
+          int idx = s.CI(i, 0);
+          s.CU.row(idx) = bb.row(i);
+        }
         break;
       }
       case 'N':
@@ -338,6 +345,10 @@ int main(int argc, char *argv[]){
         }
         rotationm[dir].barycenter = compute_barycenter(nn);
         rotationm[dir].transform(nn);
+        for(int i = 0; i < nn.rows(); i++){
+          int idx = s.CI(i, 0);
+          s.CU.row(idx) = nn.row(i);
+        }
         break;
       }
       default:

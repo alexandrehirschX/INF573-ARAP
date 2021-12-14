@@ -19,7 +19,7 @@ class Shape {
     std::vector<std::vector<int>> N;
     std::vector<Matrix3d> R;
     VectorXi Fixed;
-    std::vector<MatrixXd> V1_diff, w_V1_diff, V2_diff;
+    std::vector<MatrixXd> V1_diff, w_V1_diff;
     int n_vertices, n_fixed, n_faces, to_reserve;
     float current_energy;
     SparseMatrix<double> L;
@@ -65,7 +65,7 @@ class Shape {
         S.setZero();
         for(int n = 0; n < N[i].size(); n++){
           j = N[i][n];
-          S += w_V1_diff[i].col(j) * V1_diff[i].col(j).transpose(); //V2.row(i) - V2.row(j) V2_diff[i].col(j).transpose();
+          S += w_V1_diff[i].col(j) * V1_diff[i].col(j).transpose(); 
           //current_energy += W(i,j) * pow(( (v2i-v2j).transpose() - (R[i] * V1_diff[i].col(j))).norm(),2);
         }
         JacobiSVD<MatrixXd> svd(S, ComputeThinU | ComputeThinV);
@@ -109,7 +109,6 @@ class Shape {
 
     void deform(MatrixXd Vd){
       V2 = Vd;
-      int n_deformed = V2.rows();
       //get_b();
       b = MatrixXd::Zero(n_vertices + n_fixed, 3);
       for(int i = 0; i < n_fixed; i++){
