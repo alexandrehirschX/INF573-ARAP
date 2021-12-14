@@ -7,9 +7,21 @@
 #include <igl/snap_points.h>
 #include <stack>
 
+
 #include "shape.cpp"
 
 using namespace Eigen;
+
+
+#define X = 0;
+#define Y = 1;
+#define Z = 2;
+
+void rotate(MatrixXd &M, int dir){
+
+
+}
+
 
 
 struct State
@@ -221,7 +233,7 @@ R,r      Reset control points
         last_scene);
       // s.CU.row(sel) += (drag_scene-last_scene).cast<double>();
       /// HARD CODED HERE
-      for (int i = 0; i < 12; i ++ ){
+      for (int i = 0; i < 5; i ++ ){
         s.CU.row(i) += (drag_scene-last_scene).cast<double>();
       }
       last_mouse = drag_mouse;
